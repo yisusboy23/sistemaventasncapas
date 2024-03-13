@@ -1,16 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Producto
+namespace SistemasVentas.Modelos
 {
-	public Producto()
-	{
-		public int IdProducto {  get; set; }
-	public int IdTipoProd {  get; set; }
-	public int IdMarca {  get; set; }
-	public string Nombre { get; set; }
-	public string CodigoBarra { get; set; }
-	public int Unidad { get; set; }
-	public string Descripcion { get; set; }
-	public string Estado { get; set;}
-	}
+    internal class Producto
+    {
+        public int IdProducto { get; set; }
+        public int IdTipoProd { get; set; }
+        public int IdMarca { get; set; }
+        public string Nombre { get; set; }
+        public string CodigoBarra { get; set; }
+        public int Unidad { get; set; }
+        public string Descripcion { get; set; }
+        public string Estado { get; set; }
+    }
 }

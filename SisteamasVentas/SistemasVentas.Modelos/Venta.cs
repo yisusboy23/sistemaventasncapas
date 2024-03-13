@@ -1,14 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Venta
+namespace SistemasVentas.Modelos
 {
-	public Venta()
-	{
-		public int IdVenta {  get; set; }
-	public int IdCliente { get; set; }
-	public int IdVendedor { get; set; }
-	public string Fecha { get; set; }
-	public decimal Total {  get; set; }
-	public string Estado { get; set; }
-	}
+    internal class Venta
+    {
+        public int IdVenta { get; set; }
+        public int IdCliente { get; set; }
+        public int IdVendedor { get; set; }
+        public string Fecha { get; set; }
+        public decimal Total { get; set; }
+        public string Estado { get; set; }
+    }
 }

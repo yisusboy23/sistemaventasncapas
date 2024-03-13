@@ -6,14 +6,10 @@ using System.Threading.Tasks;
 
 namespace SistemasVentas.Modelos
 {
-    internal class Persona
+    internal class TipoProd
     {
-        public int IdPersona { get; set; }
+        public int IdTipoProd { get; set; }
         public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string Telefono { get; set; }
-        public string CI { get; set; }
-        public string Correo { get; set; }
         public string Estado { get; set; }
     }
 }

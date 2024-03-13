@@ -1,11 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Rol
+namespace SistemasVentas.Modelos
 {
-	public Rol()
-	{
-	public int IdRol {  get; set; }
-	public string Nombre { get; set; }
-    public string Estado { get; set; }
-}
+    internal class Rol
+    {
+        public int IdRol { get; set; }
+        public string Nombre { get; set; }
+        public string Estado { get; set; }
+
+    }
 }
