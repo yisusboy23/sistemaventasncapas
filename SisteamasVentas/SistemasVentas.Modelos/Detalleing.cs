@@ -9,9 +9,9 @@ public class Detalleing
 	public int IdProducto { get; set; }
 	public string FechaVenc {  get; set; }
 	public int Cantidad { get; set; }
-	public int PrecioCosto { get; set; }
-	public int PrecioVenta { get; set; }
-	public int SubTotal { get; set; }
+	public decimal PrecioCosto { get; set; }
+	public decimal PrecioVenta { get; set; }
+	public decimal SubTotal { get; set; }
 	public string Estado { get; set; }
 	}
 }
