@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.DAL;
+using SistemasVentas.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,6 +15,11 @@ namespace SistemasVentas.BSS
         public DataTable ListarClienteBss()
         {
             return dal.ListarClienteDal();
+        }
+
+        public void InsertarClienteBss(Cliente cliente)
+        {
+            dal.InsertarClienteDAL(cliente);
         }
     }
 }

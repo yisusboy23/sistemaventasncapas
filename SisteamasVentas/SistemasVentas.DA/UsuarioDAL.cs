@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemasVentas.Modelos;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -14,6 +15,14 @@ namespace SistemasVentas.DAL
             string consulta = "select * from usuario";
             DataTable Lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return Lista;
+        }
+        public void InsertarUsuarioDAL(Usuario usuario)
+        {
+            string consulta = "insert into usuario values('" + usuario.IdPersona + "'," +
+                                                          "'" + usuario.NombreUser + "'," +
+                                                          "'" + usuario.Contraseña + "'," +
+                                                          "'Activo')";
+            conexion.Ejecutar(consulta);
         }
     }
 }
