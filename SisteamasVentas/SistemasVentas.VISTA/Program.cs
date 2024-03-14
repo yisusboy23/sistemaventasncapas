@@ -12,7 +12,7 @@ namespace SistemasVentas.VISTA
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new UsuarioRolVistas.UsuarioRolListarVistas());
-            Application.Run(new ProveedorVistas.ProveedorListarVistas());
+            Application.Run(new PersonaVistas.PersonaListarVista());
         }
     }
 }
