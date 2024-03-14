@@ -1,6 +1,6 @@
 ﻿namespace SistemasVentas.VISTA.ProveedorVistas
 {
-    partial class ProveedorListarVistas
+    partial class ProveedorListarVista
     {
         /// <summary>
         /// Required designer variable.
@@ -37,21 +37,22 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 12);
+            dataGridView1.Location = new Point(12, 22);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(590, 426);
-            dataGridView1.TabIndex = 1;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(552, 353);
+            dataGridView1.TabIndex = 0;
             // 
-            // ProveedorListarVistas
+            // ProveedorListarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(603, 450);
             Controls.Add(dataGridView1);
-            Name = "ProveedorListarVistas";
-            Text = "ProveedorListarVistas";
-            Load += ProveedorListarVistas_Load;
+            Name = "ProveedorListarVista";
+            Text = "ProveedorListarVista";
+            Load += ProveedorListarVista_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

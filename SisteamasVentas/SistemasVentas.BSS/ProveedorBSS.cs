@@ -11,7 +11,7 @@ namespace SistemasVentas.BSS
     public class ProveedorBSS
     {
         ProveedorDAL dal = new ProveedorDAL();
-        public DataTable ListarProveedorlBss()
+        public DataTable ListarProveedorBss()
         {
             return dal.ListarProveedorDal();
         }

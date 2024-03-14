@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace SistemasVentas.VISTA.ProveedorVistas
 {
-    public partial class ProveedorListarVistas : Form
+    public partial class ProveedorListarVista : Form
     {
-        public ProveedorListarVistas()
+        public ProveedorListarVista()
         {
             InitializeComponent();
         }
         ProveedorBSS bss= new ProveedorBSS();
-        private void ProveedorListarVistas_Load(object sender, EventArgs e)
+        private void ProveedorListarVista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListarProveedorlBss;
+            dataGridView1.DataSource = bss.ListarProveedorBss();
         }
     }
 }

@@ -20,7 +20,7 @@ namespace SistemasVentas.VISTA.UsuarioRolVistas
         UsuarioRolBSS bss = new UsuarioRolBSS();
         private void UsuarioRolListarVistas_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListarUsuarioRolBss;
+            dataGridView1.DataSource = bss.ListarUsuarioRolBss();
         }
     }
 }
