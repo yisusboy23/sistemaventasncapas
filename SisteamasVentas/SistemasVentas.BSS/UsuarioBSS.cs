@@ -18,7 +18,7 @@ namespace SistemasVentas.BSS
         }
         public void InsertarUsuarioBss(Usuario usuario)
         {
-            dal.InsertarUsuarioDAL(usuario);
+            dal.InsertarUsuarioDal(usuario);
         }
     }
 }

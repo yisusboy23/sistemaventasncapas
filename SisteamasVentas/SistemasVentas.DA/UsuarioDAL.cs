@@ -16,12 +16,12 @@ namespace SistemasVentas.DAL
             DataTable Lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return Lista;
         }
-        public void InsertarUsuarioDAL(Usuario usuario)
+        public void InsertarUsuarioDal(Usuario usuario)
         {
-            string consulta = "insert into usuario values(" + usuario.IdPersona + "," +
-                                                                     "'" + usuario.NombreUser + "'," +
-                                                                     "'" + usuario.Contraseña + "'," +
-                                                                     "'" + usuario.FechaReg + "')";
+            string consulta = "INSERT INTO USUARIO VALUES (" + usuario.IdPersona + " , " +
+                                                            " '" + usuario.NombreUser + "' , " +
+                                                            " '" + usuario.Contraseña + "' , " +
+                                                            " '" + usuario.FechaReg + "')";
             conexion.Ejecutar(consulta);
         }
     }
