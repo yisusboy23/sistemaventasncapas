@@ -1,5 +1,6 @@
 ﻿using SistemasVentas.BSS;
 using SistemasVentas.Modelos;
+using SistemasVentas.VISTA.PersonaVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,15 @@ namespace SistemasVentas.VISTA.UsuarioVistas
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PersonaListarVista fr = new PersonaListarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }

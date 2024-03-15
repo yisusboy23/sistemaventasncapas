@@ -17,7 +17,7 @@ namespace SistemasVentas.VISTA.PersonaVistas
         {
             InitializeComponent();
         }
-        PersonaBss bss= new PersonaBss();
+        PersonaBss bss = new PersonaBss();
         private void PersonaListarVista_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarPersonaBss();

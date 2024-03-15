@@ -37,6 +37,7 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
+            button3 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -111,14 +112,28 @@
             // 
             textBox3.Location = new Point(157, 99);
             textBox3.Name = "textBox3";
+            textBox3.PasswordChar = '*';
             textBox3.Size = new Size(217, 23);
             textBox3.TabIndex = 8;
+            textBox3.UseSystemPasswordChar = true;
+            // 
+            // button3
+            // 
+            button3.DialogResult = DialogResult.OK;
+            button3.Location = new Point(403, 17);
+            button3.Name = "button3";
+            button3.Size = new Size(102, 23);
+            button3.TabIndex = 9;
+            button3.Text = "SELECCIONAR";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // UsuarioInsertarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(398, 255);
+            ClientSize = new Size(530, 255);
+            Controls.Add(button3);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -145,5 +160,6 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
+        private Button button3;
     }
 }

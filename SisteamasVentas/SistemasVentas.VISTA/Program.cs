@@ -1,3 +1,5 @@
+using SistemasVentas.Modelos;
+
 namespace SistemasVentas.VISTA
 {
     internal static class Program
