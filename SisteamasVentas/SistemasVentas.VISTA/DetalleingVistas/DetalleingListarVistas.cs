@@ -20,7 +20,7 @@ namespace SistemasVentas.VISTA.DetalleingVistas
         DetalleingBSS bss = new DetalleingBSS();
         private void DetalleingListarVistas_Load(object sender, EventArgs e)
         {
-           dataGridView1.DataSource = bss.ListarDetalleingBss;
+           dataGridView1.DataSource = bss.ListarDetalleingBss();
         }
     }
 }

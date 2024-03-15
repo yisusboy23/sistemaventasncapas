@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemasVentas.Modelos;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -14,6 +15,14 @@ namespace SistemasVentas.DAL
             string consulta = "select * from provee";
             DataTable Lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return Lista;
+        }
+        public void InsertarProveeDAL(Provee provee)
+        {
+            string consulta = "insert into provee values(" + provee.IdProducto + "," +
+                                                          "" + provee.IdProveedor + "," +
+                                                          "'" + provee.Fecha + "'," +
+                                                          " '" + provee.Precio + "')";
+            conexion.Ejecutar(consulta);
         }
     }
 }

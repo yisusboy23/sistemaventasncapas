@@ -26,5 +26,24 @@ namespace SistemasVentas.DAL
                                                           "'Activo')";
             conexion.Ejecutar(consulta);
         }
+
+        public Persona ObtenerPersonaId(int id)
+        {
+            string consulta = "select * from persona where idpersona=" + id;
+            DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");
+            Persona p = new Persona();
+            if (tabla.Rows.Count > 0)
+            {
+                p.IdPersona = Convert.ToInt32(tabla.Rows[0]["Idpersona"]);
+                p.Nombre = tabla.Rows[0]["nombre"].ToString();
+                p.Apellido = tabla.Rows[0]["apellido"].ToString();
+                p.Telefono = tabla.Rows[0]["telefono"].ToString();
+                p.CI = tabla.Rows[0]["ci"].ToString();
+                p.Correo = tabla.Rows[0]["correo"].ToString();
+                p.Estado = tabla.Rows[0]["estado"].ToString();
+            }
+            return p;
+
+        }
     }
 }

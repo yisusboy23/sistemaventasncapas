@@ -19,11 +19,13 @@ namespace SistemasVentas.VISTA.UsuarioVistas
         {
             InitializeComponent();
         }
+        public static int IdPersonaSeleccionada = 0;
         UsuarioBSS bss = new UsuarioBSS();
+        PersonaBss Bss = new PersonaBss();
         private void button1_Click(object sender, EventArgs e)
         {
             Usuario u = new Usuario();
-            u.IdPersona = Convert.ToInt32(textBox1.Text);
+            u.IdPersona= IdPersonaSeleccionada;
             u.NombreUser = textBox2.Text;
             u.Contraseña = textBox3.Text;
             u.FechaReg = dateTimePicker1.Value;
@@ -42,7 +44,8 @@ namespace SistemasVentas.VISTA.UsuarioVistas
             PersonaListarVista fr = new PersonaListarVista();
             if (fr.ShowDialog() == DialogResult.OK)
             {
-
+                Persona p =Bss.ObtenerIdBss(IdPersonaSeleccionada);
+                textBox1.Text = p.Nombre + " " + p.Apellido;
             }
         }
     }

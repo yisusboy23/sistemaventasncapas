@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.DAL;
+using SistemasVentas.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,5 +16,11 @@ namespace SistemasVentas.BSS
         {
             return dal.ListarDetalleingDal();
         }
+
+        public void InsertarDetalleingBss(Detalleing detalleing)
+        {
+            dal.InsertarDetalleingDAL(detalleing);
+        }
     }
+
 }
