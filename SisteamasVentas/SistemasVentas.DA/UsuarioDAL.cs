@@ -18,10 +18,10 @@ namespace SistemasVentas.DAL
         }
         public void InsertarUsuarioDAL(Usuario usuario)
         {
-            string consulta = "insert into usuario values('" + usuario.IdPersona + "'," +
-                                                          "'" + usuario.NombreUser + "'," +
-                                                          "'" + usuario.Contraseña + "'," +
-                                                          "'Activo')";
+            string consulta = "insert into usuario values(" + usuario.IdPersona + "," +
+                                                                     "'" + usuario.NombreUser + "'," +
+                                                                     "'" + usuario.Contraseña + "'," +
+                                                                     "'" + usuario.FechaReg + "')";
             conexion.Ejecutar(consulta);
         }
     }

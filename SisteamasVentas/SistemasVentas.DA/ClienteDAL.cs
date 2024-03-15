@@ -18,11 +18,10 @@ namespace SistemasVentas.DAL
         }
         public void InsertarClienteDAL(Cliente cliente)
         {
-            string consulta = "insert into cliente values('" + cliente.IdPersona + "'," +
+            string consulta = "insert into cliente values("+cliente.IdPersona+"," +
                                                           "'" + cliente.TipoCliente + "'," +
                                                           "'" + cliente.CodigoCliente + "'," +
                                                           "'Activo')";
-            conexion.Ejecutar(consulta);
             conexion.Ejecutar(consulta);
         }
     }

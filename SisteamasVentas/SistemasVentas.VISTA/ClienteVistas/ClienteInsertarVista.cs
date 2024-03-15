@@ -22,7 +22,7 @@ namespace SistemasVentas.VISTA.ClienteVistas
         private void button1_Click(object sender, EventArgs e)
         {
             Cliente c = new Cliente();
-            c.IdCliente = Convert.ToInt32(textBox1.Text);
+            c.IdPersona = Convert.ToInt32(textBox1.Text);
             c.TipoCliente= textBox2.Text;
             c.CodigoCliente= textBox3.Text;
 

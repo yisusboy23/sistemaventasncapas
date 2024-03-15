@@ -25,9 +25,15 @@ namespace SistemasVentas.VISTA.UsuarioVistas
             u.IdPersona = Convert.ToInt32(textBox1.Text);
             u.NombreUser = textBox2.Text;
             u.Contraseña = textBox3.Text;
+            u.FechaReg = dateTimePicker1.Value;
 
             bss.InsertarUsuarioBss(u);
             MessageBox.Show("Se guardo correctamente El Usuario");
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace SistemasVentas.VISTA.UsuarioVistas
+﻿namespace SistemasVentas.VISTA.DetalleVentaVistas
 {
-    partial class UsuarioInsertarVista
+    partial class DetalleVentaIngresarVista
     {
         /// <summary>
         /// Required designer variable.
@@ -31,105 +31,135 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            label4 = new Label();
+            label5 = new Label();
             button1 = new Button();
             button2 = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
+            textBox4 = new TextBox();
+            textBox5 = new TextBox();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(25, 25);
+            label1.Location = new Point(42, 23);
             label1.Name = "label1";
-            label1.Size = new Size(70, 15);
+            label1.Size = new Size(53, 15);
             label1.TabIndex = 0;
-            label1.Text = "IDPERSONA";
+            label1.Text = "IDVENTA";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(25, 68);
+            label2.Location = new Point(42, 73);
             label2.Name = "label2";
-            label2.Size = new Size(83, 15);
+            label2.Size = new Size(79, 15);
             label2.TabIndex = 1;
-            label2.Text = "NOMBREUSER";
+            label2.Text = "IDPRODUCTO";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(25, 107);
+            label3.Location = new Point(42, 127);
             label3.Name = "label3";
-            label3.Size = new Size(83, 15);
+            label3.Size = new Size(65, 15);
             label3.TabIndex = 2;
-            label3.Text = "CONTRASEÑA";
+            label3.Text = "CANTIDAD";
             // 
-            // dateTimePicker1
+            // label4
             // 
-            dateTimePicker1.Location = new Point(25, 147);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(349, 23);
-            dateTimePicker1.TabIndex = 3;
-            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            label4.AutoSize = true;
+            label4.Location = new Point(42, 176);
+            label4.Name = "label4";
+            label4.Size = new Size(85, 15);
+            label4.TabIndex = 3;
+            label4.Text = "PRECIO VENTA";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(42, 227);
+            label5.Name = "label5";
+            label5.Size = new Size(59, 15);
+            label5.TabIndex = 4;
+            label5.Text = "SUBTOTAL";
             // 
             // button1
             // 
-            button1.Location = new Point(25, 199);
+            button1.Location = new Point(51, 286);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
-            button1.TabIndex = 4;
+            button1.TabIndex = 5;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(226, 199);
+            button2.Location = new Point(278, 286);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
-            button2.TabIndex = 5;
+            button2.TabIndex = 6;
             button2.Text = "CANCELAR";
             button2.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(157, 17);
+            textBox1.Location = new Point(181, 20);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(217, 23);
-            textBox1.TabIndex = 6;
+            textBox1.Size = new Size(247, 23);
+            textBox1.TabIndex = 7;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(157, 60);
+            textBox2.Location = new Point(181, 65);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(217, 23);
-            textBox2.TabIndex = 7;
+            textBox2.Size = new Size(247, 23);
+            textBox2.TabIndex = 8;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(157, 99);
+            textBox3.Location = new Point(181, 119);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(217, 23);
-            textBox3.TabIndex = 8;
+            textBox3.Size = new Size(247, 23);
+            textBox3.TabIndex = 9;
             // 
-            // UsuarioInsertarVista
+            // textBox4
+            // 
+            textBox4.Location = new Point(181, 168);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(247, 23);
+            textBox4.TabIndex = 10;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(181, 219);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(247, 23);
+            textBox5.TabIndex = 11;
+            // 
+            // DetalleVentaIngresarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(398, 255);
+            ClientSize = new Size(440, 359);
+            Controls.Add(textBox5);
+            Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(label5);
+            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "UsuarioInsertarVista";
-            Text = "UsuarioInsertarVista";
+            Name = "DetalleVentaIngresarVista";
+            Text = "DetalleVentaIngresarVista";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -139,11 +169,14 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private DateTimePicker dateTimePicker1;
+        private Label label4;
+        private Label label5;
         private Button button1;
         private Button button2;
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
+        private TextBox textBox4;
+        private TextBox textBox5;
     }
 }
