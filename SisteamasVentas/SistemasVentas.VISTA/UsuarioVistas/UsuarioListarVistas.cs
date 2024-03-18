@@ -33,8 +33,8 @@ namespace SistemasVentas.VISTA.UsuarioVistas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //UsuarioInsertarVista fr = new UsuarioInsertarVista();
-            //if (fr.ShowDialog() == DialogResult.OK)
+            UsuarioInsertarVista fr = new UsuarioInsertarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
             {
                 dataGridView1.DataSource = bss.ListarUsuarioBss();
             }
