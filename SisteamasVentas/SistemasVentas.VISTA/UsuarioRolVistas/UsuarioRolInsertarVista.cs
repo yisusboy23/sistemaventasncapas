@@ -1,5 +1,7 @@
 ﻿using SistemasVentas.BSS;
 using SistemasVentas.Modelos;
+using SistemasVentas.VISTA.RolVistas;
+using SistemasVentas.VISTA.UsuarioVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,16 +20,41 @@ namespace SistemasVentas.VISTA.UsuarioRolVistas
         {
             InitializeComponent();
         }
+        public static int IdUsuarioSeleccionado = 0;
+        public static int IdRolSeleccionado = 0;
         UsuarioRolBSS bSS = new UsuarioRolBSS();
+        UsuarioBSS bssuser = new UsuarioBSS();
+        RolBss bssuser2 = new RolBss();
+
         private void button1_Click(object sender, EventArgs e)
         {
             UsuarioRol u = new UsuarioRol();
-            u.IdUsuario= Convert.ToInt32(textBox1.Text);
-            u.IdRol = Convert.ToInt32(textBox2.Text);
+            u.IdUsuario = IdUsuarioSeleccionado;
+            u.IdRol = IdRolSeleccionado;
             u.FechaAsigna = dateTimePicker1.Value;
 
             bSS.InsertarUsuarioRolBss(u);
             MessageBox.Show("Se guardo correctamente El Usuario Rol");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            UsuarioListarVistas fr = new UsuarioListarVistas();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Usuario u = bssuser.ObtenerUsuarioIdBss(IdUsuarioSeleccionado);
+                textBox1.Text = u.NombreUser;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            RolListarVistas fr = new RolListarVistas();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Rol r = bssuser2.ObtenerRolIdBss(IdRolSeleccionado);
+                textBox2.Text = r.Nombre;
+            }
         }
     }
 }

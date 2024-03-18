@@ -26,7 +26,7 @@ namespace SistemasVentas.VISTA.PersonaVistas
 
         private void PersonaEditarVista_Load(object sender, EventArgs e)
         {
-            p = bss.ObtenerIdBss(idx);
+            p = bss.ObtenerPersonaIdBss(idx);
             textBox1.Text = p.Nombre;
             textBox2.Text = p.Apellido;
             textBox3.Text = p.Telefono;

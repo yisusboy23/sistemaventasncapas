@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -40,14 +41,27 @@
             dataGridView1.Location = new Point(21, 12);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(503, 426);
             dataGridView1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            button1.DialogResult = DialogResult.OK;
+            button1.Location = new Point(421, 454);
+            button1.Name = "button1";
+            button1.Size = new Size(103, 23);
+            button1.TabIndex = 5;
+            button1.Text = "SELECCIONAR";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // VentaListarVistas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(538, 500);
+            Controls.Add(button1);
             Controls.Add(dataGridView1);
             Name = "VentaListarVistas";
             Text = "VentaListarVistas";
@@ -59,5 +73,6 @@
         #endregion
 
         private DataGridView dataGridView1;
+        private Button button1;
     }
 }

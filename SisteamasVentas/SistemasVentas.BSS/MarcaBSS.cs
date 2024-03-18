@@ -20,5 +20,21 @@ namespace SistemasVentas.BSS
         {
             dal.InsertarMarcaDAL(marca);
         }
+
+        public Marca ObtenerMarcaIdBss(int id)
+        {
+            return dal.ObtenerMarcaIdDal(id);
+        }
+
+        public void EditarMarcaBss(Marca m)
+        {
+            dal.EditarMarcaDal(m);
+        }
+
+        public void EliminarMarcaBss(int id)
+        {
+            dal.EliminarMarcaDal(id);
+        }
+
     }
 }

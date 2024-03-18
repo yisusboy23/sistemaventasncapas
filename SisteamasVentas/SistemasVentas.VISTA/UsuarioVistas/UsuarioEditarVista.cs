@@ -10,18 +10,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SistemasVentas.VISTA.UsuarioVistas
 {
-    public partial class UsuarioInsertarVista : Form
+    public partial class UsuarioEditarVista : Form
     {
-        public UsuarioInsertarVista()
-        {
-            InitializeComponent();
-        }
-        public static int IdPersonaSeleccionada = 0;
+        int idx = 0;
+        Usuario u = new Usuario();
         UsuarioBSS bss = new UsuarioBSS();
         PersonaBss bssuser = new PersonaBss();
+        public static int IdPersonaSeleccionada = 0;
+        public UsuarioEditarVista(int id)
+        {
+            idx = id;
+            InitializeComponent();
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             PersonaListarVista fr = new PersonaListarVista();
@@ -32,16 +37,24 @@ namespace SistemasVentas.VISTA.UsuarioVistas
             }
         }
 
+        private void UsuarioEditarVista_Load(object sender, EventArgs e)
+        {
+            u = bss.ObtenerUsuarioIdBss(idx);
+            textBox1.Text = IdPersonaSeleccionada.ToString();
+            textBox2.Text = u.NombreUser;
+            textBox3.Text = u.Contraseña;
+            dateTimePicker1.Value = u.FechaReg;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            Usuario u = new Usuario();
             u.IdPersona = IdPersonaSeleccionada;
             u.NombreUser = textBox2.Text;
             u.Contraseña = textBox3.Text;
             u.FechaReg = dateTimePicker1.Value;
 
-            bss.InsertarUsuarioBss(u);
-            MessageBox.Show("Se guardo correctamente El Usuario");
+            bss.EditarUsuarioBss(u);
+            MessageBox.Show("Datos Actualizados");
         }
     }
 }

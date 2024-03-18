@@ -40,6 +40,8 @@
             textBox3 = new TextBox();
             textBox4 = new TextBox();
             textBox5 = new TextBox();
+            button3 = new Button();
+            button4 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -141,11 +143,35 @@
             textBox5.Size = new Size(247, 23);
             textBox5.TabIndex = 11;
             // 
+            // button3
+            // 
+            button3.DialogResult = DialogResult.OK;
+            button3.Location = new Point(460, 20);
+            button3.Name = "button3";
+            button3.Size = new Size(94, 23);
+            button3.TabIndex = 12;
+            button3.Text = "SELECCIONAR";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.DialogResult = DialogResult.OK;
+            button4.Location = new Point(460, 65);
+            button4.Name = "button4";
+            button4.Size = new Size(94, 23);
+            button4.TabIndex = 13;
+            button4.Text = "SELECCIONAR";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // DetalleVentaIngresarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(440, 359);
+            ClientSize = new Size(566, 359);
+            Controls.Add(button4);
+            Controls.Add(button3);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
@@ -178,5 +204,7 @@
         private TextBox textBox3;
         private TextBox textBox4;
         private TextBox textBox5;
+        private Button button3;
+        private Button button4;
     }
 }

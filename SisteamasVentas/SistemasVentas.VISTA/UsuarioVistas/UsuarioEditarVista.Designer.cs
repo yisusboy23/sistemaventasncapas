@@ -1,6 +1,6 @@
 ﻿namespace SistemasVentas.VISTA.UsuarioVistas
 {
-    partial class UsuarioInsertarVista
+    partial class UsuarioEditarVista
     {
         /// <summary>
         /// Required designer variable.
@@ -43,95 +43,97 @@
             // button3
             // 
             button3.DialogResult = DialogResult.OK;
-            button3.Location = new Point(394, 24);
+            button3.Location = new Point(398, 12);
             button3.Name = "button3";
             button3.Size = new Size(102, 23);
-            button3.TabIndex = 29;
+            button3.TabIndex = 19;
             button3.Text = "SELECCIONAR";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(148, 106);
+            textBox3.Location = new Point(152, 94);
             textBox3.Name = "textBox3";
             textBox3.PasswordChar = '*';
             textBox3.Size = new Size(217, 23);
-            textBox3.TabIndex = 28;
+            textBox3.TabIndex = 18;
             textBox3.UseSystemPasswordChar = true;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(148, 67);
+            textBox2.Location = new Point(152, 55);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(217, 23);
-            textBox2.TabIndex = 27;
+            textBox2.TabIndex = 17;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(148, 24);
+            textBox1.Location = new Point(152, 12);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(217, 23);
-            textBox1.TabIndex = 26;
+            textBox1.TabIndex = 16;
             // 
             // button2
             // 
-            button2.Location = new Point(217, 206);
+            button2.DialogResult = DialogResult.Cancel;
+            button2.Location = new Point(221, 194);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
-            button2.TabIndex = 25;
+            button2.TabIndex = 15;
             button2.Text = "CANCELAR";
             button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            button1.Location = new Point(16, 206);
+            button1.DialogResult = DialogResult.OK;
+            button1.Location = new Point(20, 194);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
-            button1.TabIndex = 24;
+            button1.TabIndex = 14;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(16, 154);
+            dateTimePicker1.Location = new Point(20, 142);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(349, 23);
-            dateTimePicker1.TabIndex = 23;
+            dateTimePicker1.TabIndex = 13;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(16, 114);
+            label3.Location = new Point(20, 102);
             label3.Name = "label3";
             label3.Size = new Size(83, 15);
-            label3.TabIndex = 22;
+            label3.TabIndex = 12;
             label3.Text = "CONTRASEÑA";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(16, 75);
+            label2.Location = new Point(20, 63);
             label2.Name = "label2";
             label2.Size = new Size(83, 15);
-            label2.TabIndex = 21;
+            label2.TabIndex = 11;
             label2.Text = "NOMBREUSER";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(16, 32);
+            label1.Location = new Point(20, 20);
             label1.Name = "label1";
             label1.Size = new Size(70, 15);
-            label1.TabIndex = 20;
+            label1.TabIndex = 10;
             label1.Text = "IDPERSONA";
             // 
-            // UsuarioInsertarVista
+            // UsuarioEditarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(516, 313);
+            ClientSize = new Size(513, 247);
             Controls.Add(button3);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
@@ -142,8 +144,9 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "UsuarioInsertarVista";
-            Text = "UsuarioInsertarVista";
+            Name = "UsuarioEditarVista";
+            Text = "UsuarioEditarVista";
+            Load += UsuarioEditarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -22,9 +22,9 @@ namespace SistemasVentas.BSS
         {
             dal.InsertarPersonaDAL(persona);
         }
-        public Persona ObtenerIdBss (int id)
+        public Persona ObtenerPersonaIdBss (int id)
         {
-            return dal.ObtenerPersonaId(id);
+            return dal.ObtenerPersonaIdDal(id);
         }
          public void EditarPersonaBss(Persona p)
         {

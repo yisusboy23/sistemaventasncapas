@@ -26,5 +26,22 @@ namespace SistemasVentas.DAL
                                                           "'Exitoso')";
             conexion.Ejecutar(consulta);
         }
+
+        public Venta ObtenerVentaIdDal(int id)
+        {
+            string consulta = "select * from venta where idventa=" + id;
+            DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");
+            Venta v= new Venta();
+            if (tabla.Rows.Count > 0)
+            {
+                v.IdVenta = Convert.ToInt32(tabla.Rows[0]["idventa"]);
+                v.IdCliente = Convert.ToInt32(tabla.Rows[0]["idcliente"]);
+                v.Fecha = Convert.ToDateTime(tabla.Rows[0]["fecha"]);
+                v.Total = Convert.ToInt32(tabla.Rows[0]["idventa"]);
+                v.Estado = tabla.Rows[0]["estado"].ToString();
+            }
+            return v;
+
+        }
     }
 }

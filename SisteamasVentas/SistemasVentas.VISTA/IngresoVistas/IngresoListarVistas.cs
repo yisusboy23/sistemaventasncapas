@@ -1,4 +1,6 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.DetalleingVistas;
+using SistemasVentas.VISTA.UsuarioVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +23,12 @@ namespace SistemasVentas.VISTA.IngresoVistas
         private void IngresoListarVistas_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarIngresoBss();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DetalleingInsertarVista.IdIngresoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+
         }
     }
 }
