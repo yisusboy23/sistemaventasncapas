@@ -28,5 +28,36 @@ namespace SistemasVentas.VISTA.PersonaVistas
         {
             UsuarioInsertarVista.IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PersonaInsertarVista fr = new PersonaInsertarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarPersonaBss();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            PersonaEditarVista fr = new PersonaEditarVista(IdPersonaSeleccionada);
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarPersonaBss();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DialogResult result = MessageBox.Show("Esta seguro que desea eliminar a esta persona?", "ELIMINAR", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                bss.EliminarPersonaBss(IdPersonaSeleccionada);
+                dataGridView1.DataSource = bss.ListarPersonaBss();
+            }
+
+        }
     }
 }
