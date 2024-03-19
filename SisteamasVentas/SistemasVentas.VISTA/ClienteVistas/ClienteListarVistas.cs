@@ -29,5 +29,35 @@ namespace SistemasVentas.VISTA.ClienteVistas
         {
             VentaInsertarVista.IdClienteSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ClienteInsertarVista fr = new ClienteInsertarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarClienteBss();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ClienteEditarVista fr = new ClienteEditarVista(IdSeleccionada);
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarClienteBss();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DialogResult result = MessageBox.Show("¿Esta seguro de Eliminar este Cliente?", "Eliminando", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                bss.EliminarClienteBss(IdSeleccionada);
+                dataGridView1.DataSource = bss.ListarClienteBss();
+            }
+        }
     }
 }

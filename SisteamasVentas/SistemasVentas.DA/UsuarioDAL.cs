@@ -42,11 +42,11 @@ namespace SistemasVentas.DAL
         }
         public void EditarUsuarioDal(Usuario usuario)
         {
-            string consulta = "update usuario set idpersona='" + usuario.IdPersona + "'," +
-                                                        "nombreuser='" + usuario.NombreUser + "'," +
-                                                        "contraseña='" + usuario.Contraseña + "'," +
-                                                        "fechareg='" + usuario.FechaReg + "' " +
-                                                        "where idpersona=" + usuario.IdUsuario;
+            string consulta = "update usuario set idpersona=" + usuario.IdPersona + "," +
+                                                                   "nombreuser='" + usuario.NombreUser + "'," +
+                                                                   "contraseña='" + usuario.Contraseña + "'," +
+                                                                   "fechareg='" + usuario.FechaReg + "' " +
+                                                           "where idusuario=" + usuario.IdUsuario;
             conexion.Ejecutar(consulta);
         }
 

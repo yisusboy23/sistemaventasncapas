@@ -28,6 +28,7 @@ namespace SistemasVentas.VISTA.RolVistas
         private void button1_Click(object sender, EventArgs e)
         {
             UsuarioRolInsertarVista.IdRolSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            UsuarioRolEditarVista.IdRolSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
 
         private void button2_Click(object sender, EventArgs e)

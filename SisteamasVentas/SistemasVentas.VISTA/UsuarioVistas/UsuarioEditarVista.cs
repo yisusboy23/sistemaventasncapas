@@ -40,7 +40,7 @@ namespace SistemasVentas.VISTA.UsuarioVistas
         private void UsuarioEditarVista_Load(object sender, EventArgs e)
         {
             u = bss.ObtenerUsuarioIdBss(idx);
-            textBox1.Text = IdPersonaSeleccionada.ToString();
+            textBox1.Text = u.IdPersona.ToString();
             textBox2.Text = u.NombreUser;
             textBox3.Text = u.Contraseña;
             dateTimePicker1.Value = u.FechaReg;

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemasVentas.VISTA.PersonaVistas;
 using SistemasVentas.VISTA.RolVistas;
+using SistemasVentas.VISTA.VentaVistas;
 
 namespace SistemasVentas.VISTA.UsuarioVistas
 {
@@ -29,6 +30,9 @@ namespace SistemasVentas.VISTA.UsuarioVistas
         private void button1_Click(object sender, EventArgs e)
         {
             UsuarioRolInsertarVista.IdUsuarioSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            VentaInsertarVista.IdVendedorSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            UsuarioRolEditarVista.IdUsuarioSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

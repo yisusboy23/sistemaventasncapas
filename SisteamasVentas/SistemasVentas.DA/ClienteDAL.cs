@@ -41,5 +41,18 @@ namespace SistemasVentas.DAL
             return c;
 
         }
+        public void EditarClienteDal(Cliente c)
+        {
+            string consulta = "update cliente set idpersona=" + c.IdPersona + "," +
+                                                        "tipocliente='" + c.TipoCliente + "'," +
+                                                        "codigocliente='" + c.CodigoCliente + "'" +
+                                                "where idcliente=" + c.IdCliente;
+            conexion.Ejecutar(consulta);
+        }
+        public void EliminarClienteDal(int id)
+        {
+            string consulta = "delete from cliente where idcliente=" + id;
+            conexion.Ejecutar(consulta);
+        }
     }
 }

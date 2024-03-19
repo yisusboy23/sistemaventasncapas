@@ -38,6 +38,7 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            button4 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -116,7 +117,6 @@
             // 
             // button3
             // 
-            button3.DialogResult = DialogResult.OK;
             button3.Location = new Point(375, 5);
             button3.Name = "button3";
             button3.Size = new Size(112, 23);
@@ -125,11 +125,22 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // button4
+            // 
+            button4.Location = new Point(375, 47);
+            button4.Name = "button4";
+            button4.Size = new Size(112, 23);
+            button4.TabIndex = 10;
+            button4.Text = "SELECCIONAR";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // VentaInsertarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(530, 238);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -158,5 +169,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Button button4;
     }
 }

@@ -2,6 +2,7 @@
 using SistemasVentas.Modelos;
 using SistemasVentas.VISTA.ClienteVistas;
 using SistemasVentas.VISTA.PersonaVistas;
+using SistemasVentas.VISTA.UsuarioVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,13 +22,15 @@ namespace SistemasVentas.VISTA.VentaVistas
             InitializeComponent();
         }
         public static int IdClienteSeleccionado = 0;
+        public static int IdVendedorSeleccionado = 0;
         VentaBSS bss = new VentaBSS();
         ClienteBSS bssuser = new ClienteBSS();
+        UsuarioBSS bssven = new UsuarioBSS();
         private void button1_Click(object sender, EventArgs e)
         {
             Venta v = new Venta();
             v.IdCliente = IdClienteSeleccionado;
-            v.IdVendedor = Convert.ToInt32(textBox2.Text);
+            v.IdVendedor = IdVendedorSeleccionado;
             v.Fecha = dateTimePicker1.Value;
             v.Total = Convert.ToDecimal(textBox3.Text);
 
@@ -42,6 +45,16 @@ namespace SistemasVentas.VISTA.VentaVistas
             {
                 Cliente c = bssuser.ObtenerClienteIdBss(IdClienteSeleccionado);
                 textBox1.Text = c.TipoCliente;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            UsuarioListarVistas fr = new UsuarioListarVistas();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Usuario usuario = bssven.ObtenerUsuarioIdBss(IdVendedorSeleccionado);
+                textBox2.Text = usuario.NombreUser;
             }
         }
     }
