@@ -28,6 +28,7 @@ namespace SistemasVentas.VISTA.IngresoVistas
         private void button1_Click(object sender, EventArgs e)
         {
             DetalleingInsertarVista.IdIngresoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DetalleingEditarVista.IdIngresoSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 
         }
 
