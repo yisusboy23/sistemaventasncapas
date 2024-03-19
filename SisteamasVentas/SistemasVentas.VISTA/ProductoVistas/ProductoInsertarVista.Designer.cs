@@ -163,7 +163,6 @@
             // 
             // button3
             // 
-            button3.DialogResult = DialogResult.OK;
             button3.Location = new Point(446, 14);
             button3.Name = "button3";
             button3.Size = new Size(122, 23);
@@ -174,7 +173,6 @@
             // 
             // button4
             // 
-            button4.DialogResult = DialogResult.OK;
             button4.Location = new Point(448, 54);
             button4.Name = "button4";
             button4.Size = new Size(122, 23);

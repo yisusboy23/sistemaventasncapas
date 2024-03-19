@@ -20,5 +20,17 @@ namespace SistemasVentas.BSS
         {
             dal.InsertarProveeDAL(provee);
         }
+        public Provee ObtenerProveeIdBss(int id)
+        {
+            return dal.ObtenerProveeIdDal(id);
+        }
+        public void EditarProveeBss(Provee p)
+        {
+            dal.EditarProveeDal(p);
+        }
+        public void EliminarProveeBss(int id)
+        {
+            dal.EliminarProveeDal(id);
+        }
     }
 }

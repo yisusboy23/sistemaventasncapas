@@ -49,5 +49,23 @@ namespace SistemasVentas.DAL
             return p;
 
         }
+
+        public void EditarProductoDal(Producto p)
+        {
+            string consulta = "update producto set idtipoprod=" + p.IdTipoProd + "," +
+                                                        "idmarca=" + p.IdMarca + "," +
+                                                        "nombre='" + p.Nombre + "'," +
+                                                        "codigobarra='" + p.CodigoBarra + "'," +
+                                                        "unidad=" + p.Unidad + "," +
+                                                        "descripcion='" + p.Descripcion + "'," +
+                                                        "estado='" + p.Estado + "' " +
+                                                "where idproducto=" + p.IdProducto;
+            conexion.Ejecutar(consulta);
+        }
+        public void EliminarProductoDal(int id)
+        {
+            string consulta = "delete from producto where idproducto=" + id;
+            conexion.Ejecutar(consulta);
+        }
     }
 }

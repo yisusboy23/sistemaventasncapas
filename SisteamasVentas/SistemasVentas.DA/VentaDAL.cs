@@ -43,5 +43,20 @@ namespace SistemasVentas.DAL
             return v;
 
         }
+        public void EditarVentaDal(Venta v)
+        {
+            string consulta = "update venta set idcliente=" + v.IdCliente + "," +
+                                                        "idvendedor=" + v.IdVendedor + "," +
+                                                        "fecha='" + v.Fecha + "', " +
+                                                        "total=" + v.Total + "," +
+                                                        "estado='" + v.Estado + "' " +
+                                                "where idventa=" + v.IdVenta;
+            conexion.Ejecutar(consulta);
+        }
+        public void EliminarVentaDal(int id)
+        {
+            string consulta = "delete from venta where idventa=" + id;
+            conexion.Ejecutar(consulta);
+        }
     }
 }
