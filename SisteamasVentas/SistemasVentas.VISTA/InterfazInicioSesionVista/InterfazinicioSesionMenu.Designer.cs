@@ -111,7 +111,6 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(351, 23);
             textBox2.TabIndex = 11;
-            textBox2.Text = "CONTRASEÑA";
             // 
             // textBox1
             // 
@@ -119,7 +118,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(351, 23);
             textBox1.TabIndex = 9;
-            textBox1.Text = "USUARIO";
             // 
             // InterfazinicioSesionMenu
             // 

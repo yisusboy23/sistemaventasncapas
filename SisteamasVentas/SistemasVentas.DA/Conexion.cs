@@ -63,7 +63,10 @@ namespace SistemasVentas.DAL
         }
         public static bool VerificarCredenciales(string usuario, string contraseña)
         {
-            string consulta = "SELECT COUNT(1) FROM usuario WHERE nombreuser = @Usuario AND contraseña = @Contraseña";
+            string consulta = "SELECT COUNT(1) FROM Usuario AS U " +
+                              "INNER JOIN UsuarioRol AS UR ON U.IDUsuario = UR.IDUsuario " +
+                              "WHERE U.NombreUser = @Usuario AND U.Contraseña = @Contraseña " +
+                              "AND UR.IDRol = 1";
 
             using (SqlConnection conectar = new SqlConnection(CONECTAR))
             {
@@ -75,6 +78,50 @@ namespace SistemasVentas.DAL
                 int count = Convert.ToInt32(cmd.ExecuteScalar());
                 return count == 1;
             }
+
+
+        }
+
+        public static bool VerificarCredenciales2(string usuario, string contraseña)
+        {
+            string consulta = "SELECT COUNT(1) FROM Usuario AS U " +
+                              "INNER JOIN UsuarioRol AS UR ON U.IDUsuario = UR.IDUsuario " +
+                              "WHERE U.NombreUser = @Usuario AND U.Contraseña = @Contraseña " +
+                              "AND UR.IDRol = 2";
+
+            using (SqlConnection conectar = new SqlConnection(CONECTAR))
+            {
+                conectar.Open();
+                SqlCommand cmd = new SqlCommand(consulta, conectar);
+                cmd.Parameters.AddWithValue("@Usuario", usuario);
+                cmd.Parameters.AddWithValue("@Contraseña", contraseña);
+
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count == 1;
+            }
+
+
+        }
+
+        public static bool VerificarCredenciales3(string usuario, string contraseña)
+        {
+            string consulta = "SELECT COUNT(1) FROM Usuario AS U " +
+                              "INNER JOIN UsuarioRol AS UR ON U.IDUsuario = UR.IDUsuario " +
+                              "WHERE U.NombreUser = @Usuario AND U.Contraseña = @Contraseña " +
+                              "AND UR.IDRol = 4";
+
+            using (SqlConnection conectar = new SqlConnection(CONECTAR))
+            {
+                conectar.Open();
+                SqlCommand cmd = new SqlCommand(consulta, conectar);
+                cmd.Parameters.AddWithValue("@Usuario", usuario);
+                cmd.Parameters.AddWithValue("@Contraseña", contraseña);
+
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count == 1;
+            }
+
+
         }
     }
 }
