@@ -69,7 +69,7 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(-2, -2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(960, 186);
+            panel1.Size = new Size(1068, 186);
             panel1.TabIndex = 0;
             // 
             // pictureBox2
@@ -107,7 +107,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(3, 88);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(957, 95);
+            pictureBox1.Size = new Size(1062, 95);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -158,6 +158,7 @@
             // 
             // button2
             // 
+            button2.Cursor = Cursors.Hand;
             button2.Location = new Point(3, 43);
             button2.Name = "button2";
             button2.Size = new Size(254, 36);
@@ -297,7 +298,7 @@
             panel3.BackColor = Color.Gainsboro;
             panel3.Location = new Point(307, 187);
             panel3.Name = "panel3";
-            panel3.Size = new Size(651, 519);
+            panel3.Size = new Size(759, 519);
             panel3.TabIndex = 2;
             // 
             // InterfazGerenteMenu
@@ -305,7 +306,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightBlue;
-            ClientSize = new Size(961, 720);
+            ClientSize = new Size(1072, 720);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);

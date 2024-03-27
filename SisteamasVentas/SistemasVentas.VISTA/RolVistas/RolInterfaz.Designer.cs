@@ -40,7 +40,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(33, 169);
+            button3.Location = new Point(19, 110);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 14;
@@ -51,7 +51,7 @@
             // button4
             // 
             button4.DialogResult = DialogResult.OK;
-            button4.Location = new Point(230, 231);
+            button4.Location = new Point(230, 213);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 13;
@@ -62,7 +62,7 @@
             // button2
             // 
             button2.DialogResult = DialogResult.OK;
-            button2.Location = new Point(230, 169);
+            button2.Location = new Point(230, 110);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 12;
@@ -73,7 +73,7 @@
             // button1
             // 
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(33, 231);
+            button1.Location = new Point(19, 213);
             button1.Name = "button1";
             button1.Size = new Size(100, 23);
             button1.TabIndex = 11;
@@ -103,12 +103,12 @@
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.BackgroundColor = SystemColors.ActiveCaption;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(320, 38);
+            dataGridView1.Location = new Point(311, 26);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(468, 375);
+            dataGridView1.Size = new Size(436, 481);
             dataGridView1.TabIndex = 8;
             dataGridView1.Click += dataGridView1_Click;
             // 
@@ -117,7 +117,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightBlue;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(759, 519);
             Controls.Add(button3);
             Controls.Add(button4);
             Controls.Add(button2);
@@ -125,6 +125,7 @@
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "RolInterfaz";
             Text = "RolInterfaz";
             Load += RolInterfaz_Load;

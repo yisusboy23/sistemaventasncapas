@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemasVentas.VISTA.RolVistas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,25 +17,29 @@ namespace SistemasVentas.VISTA.InterfazGerenteVista
         {
             InitializeComponent();
             // Configuración del tamaño del FlowLayoutPanel
-            flowLayoutPanel1.Width = panel1.ClientSize.Width; // Ancho igual al del panel
             flowLayoutPanel1.AutoSize = true; // Para ajustar automáticamente la altura
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown; // Configurar los controles para que se coloquen de arriba hacia abajo
+            flowLayoutPanel1.WrapContents = false; // Evitar el salto a una nueva fila
 
             // Configuración del Panel para desplazamiento automático
             panel1.AutoScroll = true;
 
-            // Agregar botones al FlowLayoutPanel
-            for (int i = 0; i < 20; i++)
-            {
-                Button button = new Button();
-                button.Text = "Botón " + (i + 1);
-                button.Width = flowLayoutPanel1.ClientSize.Width - SystemInformation.VerticalScrollBarWidth; // Ajustar ancho para tener en cuenta la barra de desplazamiento vertical
-                flowLayoutPanel1.Controls.Add(button);
-            }
         }
+        private void AbrirFormHija(Object FormHija)
+        {
+            if (this.panel3.Controls.Count>0)
+                this.panel3.Controls.RemoveAt(0);
+            Form fh = FormHija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
 
+        }
         private void button2_Click(object sender, EventArgs e)
         {
-
+            AbrirFormHija(new RolInterfaz());
         }
     }
 }

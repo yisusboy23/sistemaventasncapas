@@ -44,19 +44,19 @@
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.BackgroundColor = SystemColors.ActiveCaption;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(320, 63);
+            dataGridView1.Location = new Point(311, 28);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(468, 375);
+            dataGridView1.Size = new Size(427, 440);
             dataGridView1.TabIndex = 0;
             dataGridView1.Click += dataGridView1_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 63);
+            label1.Location = new Point(12, 28);
             label1.Name = "label1";
             label1.Size = new Size(56, 15);
             label1.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(84, 63);
+            textBox1.Location = new Point(84, 28);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(221, 23);
             textBox1.TabIndex = 2;
@@ -72,7 +72,7 @@
             // button1
             // 
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(33, 256);
+            button1.Location = new Point(12, 194);
             button1.Name = "button1";
             button1.Size = new Size(100, 23);
             button1.TabIndex = 3;
@@ -83,7 +83,7 @@
             // button2
             // 
             button2.DialogResult = DialogResult.OK;
-            button2.Location = new Point(230, 194);
+            button2.Location = new Point(220, 125);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 4;
@@ -94,7 +94,7 @@
             // button4
             // 
             button4.DialogResult = DialogResult.OK;
-            button4.Location = new Point(230, 256);
+            button4.Location = new Point(220, 194);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 6;
@@ -104,7 +104,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(33, 194);
+            button3.Location = new Point(12, 125);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 7;
@@ -117,7 +117,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightBlue;
-            ClientSize = new Size(806, 471);
+            ClientSize = new Size(743, 480);
             Controls.Add(button3);
             Controls.Add(button4);
             Controls.Add(button2);

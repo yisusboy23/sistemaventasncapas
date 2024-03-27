@@ -40,7 +40,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(33, 169);
+            button3.Location = new Point(12, 100);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 21;
@@ -51,7 +51,7 @@
             // button4
             // 
             button4.DialogResult = DialogResult.OK;
-            button4.Location = new Point(230, 231);
+            button4.Location = new Point(230, 156);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 20;
@@ -62,7 +62,7 @@
             // button2
             // 
             button2.DialogResult = DialogResult.OK;
-            button2.Location = new Point(230, 169);
+            button2.Location = new Point(230, 100);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 19;
@@ -73,7 +73,7 @@
             // button1
             // 
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(33, 231);
+            button1.Location = new Point(12, 156);
             button1.Name = "button1";
             button1.Size = new Size(100, 23);
             button1.TabIndex = 18;
@@ -108,7 +108,7 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(468, 375);
+            dataGridView1.Size = new Size(411, 430);
             dataGridView1.TabIndex = 15;
             dataGridView1.Click += dataGridView1_Click;
             // 
@@ -117,7 +117,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightBlue;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(743, 480);
             Controls.Add(button3);
             Controls.Add(button4);
             Controls.Add(button2);

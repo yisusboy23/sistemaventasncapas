@@ -36,5 +36,9 @@ namespace SistemasVentas.BSS
             dal.EliminarUsuarioDal(id);
         }
 
+        public DataTable UsuarioDatosBSS() 
+        { 
+            return dal.UsuarioDatosDal();
+        }
     }
 }

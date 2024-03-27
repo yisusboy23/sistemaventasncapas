@@ -103,6 +103,7 @@
             button1.TabIndex = 12;
             button1.Text = "LOGIN";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // textBox2
             // 
