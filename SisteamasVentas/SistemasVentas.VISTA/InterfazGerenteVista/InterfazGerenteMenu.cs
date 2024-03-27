@@ -31,5 +31,10 @@ namespace SistemasVentas.VISTA.InterfazGerenteVista
                 flowLayoutPanel1.Controls.Add(button);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
