@@ -82,5 +82,10 @@ namespace SistemasVentas.VISTA.MarcaVistas
             MessageBox.Show("Se guardo correctamente la marca");
             dataGridView1.DataSource = bss.ListarMarcaBss();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

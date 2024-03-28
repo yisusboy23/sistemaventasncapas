@@ -51,7 +51,6 @@
             button13 = new Button();
             button14 = new Button();
             button15 = new Button();
-            button16 = new Button();
             panel3 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -139,26 +138,33 @@
             flowLayoutPanel1.Controls.Add(button13);
             flowLayoutPanel1.Controls.Add(button14);
             flowLayoutPanel1.Controls.Add(button15);
-            flowLayoutPanel1.Controls.Add(button16);
             flowLayoutPanel1.Location = new Point(14, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(274, 691);
+            flowLayoutPanel1.Size = new Size(274, 653);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // button1
             // 
-            button1.BackColor = Color.Azure;
+            button1.BackColor = Color.RoyalBlue;
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
             button1.Location = new Point(3, 3);
             button1.Name = "button1";
             button1.Size = new Size(254, 34);
             button1.TabIndex = 0;
             button1.Text = "PERSONA";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
             button2.Cursor = Cursors.Hand;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             button2.Location = new Point(3, 43);
             button2.Name = "button2";
             button2.Size = new Size(254, 36);
@@ -169,129 +175,162 @@
             // 
             // button3
             // 
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             button3.Location = new Point(3, 85);
             button3.Name = "button3";
             button3.Size = new Size(254, 36);
             button3.TabIndex = 2;
-            button3.Text = "button3";
+            button3.Text = "TIPOPROD";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             button4.Location = new Point(3, 127);
             button4.Name = "button4";
             button4.Size = new Size(254, 36);
             button4.TabIndex = 3;
-            button4.Text = "button4";
+            button4.Text = "MARCA";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             button5.Location = new Point(3, 169);
             button5.Name = "button5";
             button5.Size = new Size(254, 36);
             button5.TabIndex = 4;
-            button5.Text = "button5";
+            button5.Text = "PROVEEDOR";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             button6.Location = new Point(3, 211);
             button6.Name = "button6";
             button6.Size = new Size(254, 36);
             button6.TabIndex = 5;
-            button6.Text = "button6";
+            button6.Text = "USUARIO";
             button6.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
+            button7.FlatAppearance.BorderSize = 0;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             button7.Location = new Point(3, 253);
             button7.Name = "button7";
             button7.Size = new Size(254, 36);
             button7.TabIndex = 6;
-            button7.Text = "button7";
+            button7.Text = "USUARIO ROL";
             button7.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             button8.Location = new Point(3, 295);
             button8.Name = "button8";
             button8.Size = new Size(254, 36);
             button8.TabIndex = 7;
-            button8.Text = "button8";
+            button8.Text = "CLIENTE";
             button8.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
+            button9.FlatAppearance.BorderSize = 0;
+            button9.FlatStyle = FlatStyle.Flat;
+            button9.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             button9.Location = new Point(3, 337);
             button9.Name = "button9";
             button9.Size = new Size(254, 36);
             button9.TabIndex = 8;
-            button9.Text = "button9";
+            button9.Text = "INGRESO";
             button9.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
+            button10.FlatAppearance.BorderSize = 0;
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             button10.Location = new Point(3, 379);
             button10.Name = "button10";
             button10.Size = new Size(254, 36);
             button10.TabIndex = 9;
-            button10.Text = "button10";
+            button10.Text = "VENTA";
             button10.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
+            button11.FlatAppearance.BorderSize = 0;
+            button11.FlatStyle = FlatStyle.Flat;
+            button11.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             button11.Location = new Point(3, 421);
             button11.Name = "button11";
             button11.Size = new Size(254, 37);
             button11.TabIndex = 10;
-            button11.Text = "button11";
+            button11.Text = "PRODUCTO";
             button11.UseVisualStyleBackColor = true;
             // 
             // button12
             // 
+            button12.FlatAppearance.BorderSize = 0;
+            button12.FlatStyle = FlatStyle.Flat;
+            button12.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             button12.Location = new Point(3, 464);
             button12.Name = "button12";
             button12.Size = new Size(254, 36);
             button12.TabIndex = 11;
-            button12.Text = "button12";
+            button12.Text = "PROVEE";
             button12.UseVisualStyleBackColor = true;
             // 
             // button13
             // 
+            button13.FlatAppearance.BorderSize = 0;
+            button13.FlatStyle = FlatStyle.Flat;
+            button13.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             button13.Location = new Point(3, 506);
             button13.Name = "button13";
             button13.Size = new Size(254, 36);
             button13.TabIndex = 12;
-            button13.Text = "button13";
+            button13.Text = "DETALLE VENTA";
             button13.UseVisualStyleBackColor = true;
             // 
             // button14
             // 
+            button14.FlatAppearance.BorderSize = 0;
+            button14.FlatStyle = FlatStyle.Flat;
+            button14.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             button14.Location = new Point(3, 548);
             button14.Name = "button14";
             button14.Size = new Size(254, 36);
             button14.TabIndex = 13;
-            button14.Text = "button14";
+            button14.Text = "DETALLE ING";
             button14.UseVisualStyleBackColor = true;
             // 
             // button15
             // 
+            button15.FlatAppearance.BorderSize = 0;
+            button15.FlatStyle = FlatStyle.Flat;
+            button15.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             button15.Location = new Point(3, 590);
             button15.Name = "button15";
             button15.Size = new Size(254, 36);
             button15.TabIndex = 14;
-            button15.Text = "button15";
+            button15.Text = "CERRAR SESION";
             button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            button16.Location = new Point(3, 632);
-            button16.Name = "button16";
-            button16.Size = new Size(254, 36);
-            button16.TabIndex = 15;
-            button16.Text = "button16";
-            button16.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -346,6 +385,5 @@
         private Button button13;
         private Button button14;
         private Button button15;
-        private Button button16;
     }
 }
