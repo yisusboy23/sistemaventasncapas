@@ -223,6 +223,7 @@
             button6.TabIndex = 5;
             button6.Text = "USUARIO";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
@@ -235,6 +236,7 @@
             button7.TabIndex = 6;
             button7.Text = "USUARIO ROL";
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button8
             // 
@@ -247,6 +249,7 @@
             button8.TabIndex = 7;
             button8.Text = "CLIENTE";
             button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
             // 
             // button9
             // 
@@ -259,6 +262,7 @@
             button9.TabIndex = 8;
             button9.Text = "INGRESO";
             button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
             // 
             // button10
             // 
@@ -271,6 +275,7 @@
             button10.TabIndex = 9;
             button10.Text = "VENTA";
             button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
             // 
             // button11
             // 
@@ -283,6 +288,7 @@
             button11.TabIndex = 10;
             button11.Text = "PRODUCTO";
             button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
             // 
             // button12
             // 
@@ -295,6 +301,7 @@
             button12.TabIndex = 11;
             button12.Text = "PROVEE";
             button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
             // 
             // button13
             // 
@@ -307,6 +314,7 @@
             button13.TabIndex = 12;
             button13.Text = "DETALLE VENTA";
             button13.UseVisualStyleBackColor = true;
+            button13.Click += button13_Click;
             // 
             // button14
             // 
@@ -319,6 +327,7 @@
             button14.TabIndex = 13;
             button14.Text = "DETALLE ING";
             button14.UseVisualStyleBackColor = true;
+            button14.Click += button14_Click;
             // 
             // button15
             // 

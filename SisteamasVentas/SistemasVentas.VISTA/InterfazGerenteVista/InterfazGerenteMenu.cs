@@ -1,8 +1,15 @@
-﻿using SistemasVentas.VISTA.MarcaVistas;
+﻿using SistemasVentas.VISTA.ClienteVistas;
+using SistemasVentas.VISTA.DetalleingVistas;
+using SistemasVentas.VISTA.DetalleVentaVistas;
+using SistemasVentas.VISTA.IngresoVistas;
+using SistemasVentas.VISTA.MarcaVistas;
 using SistemasVentas.VISTA.PersonaVistas;
+using SistemasVentas.VISTA.ProductoVistas;
 using SistemasVentas.VISTA.ProveedorVistas;
+using SistemasVentas.VISTA.ProveeVistas;
 using SistemasVentas.VISTA.RolVistas;
 using SistemasVentas.VISTA.TipoProdVistas;
+using SistemasVentas.VISTA.VentaVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -64,6 +71,51 @@ namespace SistemasVentas.VISTA.InterfazGerenteVista
         private void button5_Click(object sender, EventArgs e)
         {
             AbrirFormHija(new ProveedorInterfaz());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new UsuarioVistas.UsuarioInterfaz());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new UsuarioRolVistas.UsuarioRolInterfaz());
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new ClienteInterfaz());
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new IngresoInterfaz());
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new VentaInterfaz());
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new ProductoInterfaz());
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new ProveeInterfaz());
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new DetalleVentaInterfaz());
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new DetalleingInterfaz());
         }
     }
 }
