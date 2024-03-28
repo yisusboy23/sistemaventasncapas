@@ -50,5 +50,15 @@ namespace SistemasVentas.DAL
             string consulta = "delete from rol where idrol=" + id;
             conexion.Ejecutar(consulta);
         }
+
+        public DataTable RolDatosDal()
+        {
+            string consulta = " SELECT (ROL.NOMBRE) ROL, USUARIO.NOMBREUSER, USUARIO.CONTRASEÑA " +
+                               " FROM ROL CROSS JOIN" +
+                               " USUARIO";
+
+            return conexion.EjecutarDataTabla(consulta, "fsdf");
+
+        }
     }
 }

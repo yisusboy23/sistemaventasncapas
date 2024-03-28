@@ -65,5 +65,21 @@ namespace SistemasVentas.DAL
             string consulta = "delete from detalleing where iddetalleing=" + id;
             conexion.Ejecutar(consulta);
         }
+        public DataTable DetalleingDatosDal()
+        {
+            string consulta = " SELECT PROVEEDOR.NOMBRE, PROVEEDOR.TELEFONO, PRODUCTO.NOMBRE AS Expr1, MARCA.NOMBRE AS Expr2, " +
+                               " TIPOPROD.NOMBRE AS Expr3, INGRESO.TOTAL, DETALLEING.FECHAVENC, DETALLEING.CANTIDAD, " +
+                               " DETALLEING.PRECIOCOSTO, DETALLEING.PRECIOVENTA, DETALLEING.SUBTOTAL" +
+                               " FROM DETALLEING INNER JOIN" +
+                               " INGRESO ON DETALLEING.IDINGRESO = INGRESO.IDINGRESO INNER JOIN" +
+                               " PRODUCTO ON DETALLEING.IDPRODUCTO = PRODUCTO.IDPRODUCTO INNER JOIN" +
+                               " TIPOPROD ON PRODUCTO.IDTIPOPROD = TIPOPROD.IDTIPOPROD INNER JOIN" +
+                               " MARCA ON PRODUCTO.IDMARCA = MARCA.IDMARCA INNER JOIN" +
+                               " PROVEEDOR ON INGRESO.IDPROVEEDOR = PROVEEDOR.IDPROVEEDOR";
+
+            return conexion.EjecutarDataTabla(consulta, "fsdf");
+
+        }
+
     }
 }

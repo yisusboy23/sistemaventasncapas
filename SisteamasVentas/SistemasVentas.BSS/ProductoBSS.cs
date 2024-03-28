@@ -33,5 +33,9 @@ namespace SistemasVentas.BSS
         {
             dal.EliminarProductoDal(id);
         }
+        public DataTable ProductoDatosBss()
+        {
+            return dal.ProductoDatosDal();
+        }
     }
 }

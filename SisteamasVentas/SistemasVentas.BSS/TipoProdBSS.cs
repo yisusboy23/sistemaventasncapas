@@ -34,5 +34,10 @@ namespace SistemasVentas.BSS
         {
             dal.EliminarTipoProdDal(id);
         }
+
+        public DataTable TipoProdDatosBSS()
+        {
+            return dal.TipoProdDatosDal();
+        }
     }
 }

@@ -36,5 +36,9 @@ namespace SistemasVentas.BSS
             dal.EliminarMarcaDal(id);
         }
 
+        public DataTable MarcaDatosBSS()
+        {
+            return dal.MarcaDatosDal();
+        }
     }
 }

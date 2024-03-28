@@ -33,6 +33,11 @@ namespace SistemasVentas.BSS
         {
             dal.EliminarDetalleIngDal(id);
         }
+
+        public DataTable DetalleingDatosBSS()
+        {
+            return dal.DetalleingDatosDal();
+        }
     }
 
 }

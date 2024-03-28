@@ -37,5 +37,10 @@ namespace SistemasVentas.BSS
             dal.EliminarRolDal(id);
         }
 
+        public DataTable RolDatosBSS()
+        {
+            return dal.RolDatosDal();
+        }
+
     }
 }
