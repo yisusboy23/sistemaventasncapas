@@ -1,5 +1,7 @@
 ﻿using SistemasVentas.DAL;
 using SistemasVentas.VISTA.InterfazGerenteVista;
+using SistemasVentas.VISTA.InterfazSupervisorVista;
+using SistemasVentas.VISTA.InterfazVendedorVista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,15 +38,15 @@ namespace SistemasVentas.VISTA.InterfazInicioSesionVista
             }
             else if (conexion.VerificarCredenciales2(nombreuser, contraseña))
             {
-                // Acciones específicas para el segundo rol
-                MessageBox.Show("Usuario no tiene roles válidos");
+                InterfazSupervisorMenu abrir = new InterfazSupervisorMenu();
+                abrir.Show();
             }
             // Agregar más bloques if según sea necesario para otros roles
             // ...
             else if (conexion.VerificarCredenciales3(nombreuser, contraseña))
             {
-                // Otro tipo de usuario (no tiene los roles esperados)
-                MessageBox.Show("Usuario no tiene roles válidos");
+                InterfazVendedorMenu abrir = new InterfazVendedorMenu();
+                abrir.Show();
             }
             else
             {

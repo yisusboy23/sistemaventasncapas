@@ -52,6 +52,7 @@
             button14 = new Button();
             button15 = new Button();
             panel3 = new Panel();
+            label3 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -62,6 +63,7 @@
             // panel1
             // 
             panel1.BackColor = Color.RoyalBlue;
+            panel1.Controls.Add(label3);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
@@ -349,6 +351,16 @@
             panel3.Size = new Size(759, 519);
             panel3.TabIndex = 2;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Sitka Text", 26.2499962F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(455, 35);
+            label3.Name = "label3";
+            label3.Size = new Size(194, 50);
+            label3.TabIndex = 4;
+            label3.Text = "GERENTE";
+            // 
             // InterfazGerenteMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -394,5 +406,6 @@
         private Button button13;
         private Button button14;
         private Button button15;
+        private Label label3;
     }
 }
