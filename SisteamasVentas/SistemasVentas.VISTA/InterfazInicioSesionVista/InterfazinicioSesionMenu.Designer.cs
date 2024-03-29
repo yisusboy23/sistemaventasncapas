@@ -37,6 +37,8 @@
             button1 = new Button();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
+            label3 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -85,6 +87,8 @@
             // panel1
             // 
             panel1.BackColor = Color.LightBlue;
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(textBox1);
@@ -109,8 +113,10 @@
             // 
             textBox2.Location = new Point(25, 149);
             textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
             textBox2.Size = new Size(351, 23);
             textBox2.TabIndex = 11;
+            textBox2.UseSystemPasswordChar = true;
             // 
             // textBox1
             // 
@@ -118,6 +124,26 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(351, 23);
             textBox1.TabIndex = 9;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(25, 30);
+            label3.Name = "label3";
+            label3.Size = new Size(85, 23);
+            label3.TabIndex = 8;
+            label3.Text = "USUARIO";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(25, 109);
+            label4.Name = "label4";
+            label4.Size = new Size(121, 23);
+            label4.TabIndex = 13;
+            label4.Text = "CONTRASEÑA";
             // 
             // InterfazinicioSesionMenu
             // 
@@ -150,5 +176,7 @@
         private TextBox textBox2;
         private TextBox textBox1;
         private Button button1;
+        private Label label4;
+        private Label label3;
     }
 }
