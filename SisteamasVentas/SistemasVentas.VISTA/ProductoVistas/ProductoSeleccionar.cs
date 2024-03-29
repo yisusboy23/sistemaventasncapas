@@ -1,4 +1,6 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.DetalleingVistas;
+using SistemasVentas.VISTA.DetalleVentaVistas;
 using SistemasVentas.VISTA.ProveeVistas;
 using System;
 using System.Collections.Generic;
@@ -27,8 +29,8 @@ namespace SistemasVentas.VISTA.ProductoVistas
         private void button1_Click(object sender, EventArgs e)
         {
             ProveeInterfaz.IdProductoSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            //DetalleVentaInterfaz.IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            //DetalleingInterfaz.IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DetalleVentaInterfaz.IdProductoSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DetalleingInterfaz.IdProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 
         }
 

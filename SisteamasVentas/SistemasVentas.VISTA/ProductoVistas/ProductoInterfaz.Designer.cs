@@ -84,6 +84,7 @@
             button6.Size = new Size(57, 23);
             button6.TabIndex = 166;
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button5
             // 
@@ -94,6 +95,7 @@
             button5.Size = new Size(57, 23);
             button5.TabIndex = 163;
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // label9
             // 
@@ -178,6 +180,7 @@
             button3.Size = new Size(59, 49);
             button3.TabIndex = 154;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -189,6 +192,7 @@
             button4.Size = new Size(59, 49);
             button4.TabIndex = 153;
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button2
             // 
@@ -200,6 +204,7 @@
             button2.Size = new Size(59, 49);
             button2.TabIndex = 152;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -211,6 +216,7 @@
             button1.Size = new Size(59, 49);
             button1.TabIndex = 151;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // dataGridView1
             // 
@@ -225,6 +231,7 @@
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(387, 401);
             dataGridView1.TabIndex = 150;
+            dataGridView1.Click += dataGridView1_Click;
             // 
             // label7
             // 
@@ -330,6 +337,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "ProductoInterfaz";
             Text = "ProductoInterfaz";
+            Load += ProductoInterfaz_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
