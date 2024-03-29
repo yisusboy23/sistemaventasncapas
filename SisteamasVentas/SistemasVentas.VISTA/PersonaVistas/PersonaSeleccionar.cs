@@ -28,7 +28,7 @@ namespace SistemasVentas.VISTA.PersonaVistas
         private void button1_Click(object sender, EventArgs e)
         {
             UsuarioInterfaz.IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            //ClienteInsertarVista.IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ClienteInterfaz.IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
 
         private void button2_Click(object sender, EventArgs e)

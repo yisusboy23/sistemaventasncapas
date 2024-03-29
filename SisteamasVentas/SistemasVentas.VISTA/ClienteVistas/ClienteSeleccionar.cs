@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.VentaVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +26,7 @@ namespace SistemasVentas.VISTA.ClienteVistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //VentaInterfaz.IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            VentaInterfaz.IdClienteSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
 
         private void button2_Click(object sender, EventArgs e)
