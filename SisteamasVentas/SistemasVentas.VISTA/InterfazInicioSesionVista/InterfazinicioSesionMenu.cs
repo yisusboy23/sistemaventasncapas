@@ -35,11 +35,13 @@ namespace SistemasVentas.VISTA.InterfazInicioSesionVista
             {
                 InterfazGerenteMenu abrir = new InterfazGerenteMenu();
                 abrir.Show();
+                this.Hide();
             }
             else if (conexion.VerificarCredenciales2(nombreuser, contraseña))
             {
                 InterfazSupervisorMenu abrir = new InterfazSupervisorMenu();
                 abrir.Show();
+                this.Hide();
             }
             // Agregar más bloques if según sea necesario para otros roles
             // ...
@@ -47,6 +49,7 @@ namespace SistemasVentas.VISTA.InterfazInicioSesionVista
             {
                 InterfazVendedorMenu abrir = new InterfazVendedorMenu();
                 abrir.Show();
+                this.Hide();
             }
             else
             {

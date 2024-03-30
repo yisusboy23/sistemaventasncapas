@@ -78,6 +78,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // label2
             // 
@@ -134,6 +135,7 @@
             button3.TabIndex = 3;
             button3.Text = "CERRAR SESION";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -186,6 +188,7 @@
             Controls.Add(panel1);
             Name = "InterfazVendedorMenu";
             Text = "InterfazVendedorMenu";
+            Load += InterfazVendedorMenu_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

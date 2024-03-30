@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfazSupervisorMenu));
             panel1 = new Panel();
+            label3 = new Label();
             pictureBox2 = new PictureBox();
             label2 = new Label();
             label1 = new Label();
@@ -39,7 +40,6 @@
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
-            label3 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -59,6 +59,16 @@
             panel1.Size = new Size(1079, 186);
             panel1.TabIndex = 1;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Sitka Text", 26.2499962F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(510, 58);
+            label3.Name = "label3";
+            label3.Size = new Size(248, 50);
+            label3.TabIndex = 4;
+            label3.Text = "SUPERVISOR";
+            // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
@@ -68,6 +78,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // label2
             // 
@@ -132,6 +143,7 @@
             button3.TabIndex = 3;
             button3.Text = "CERRAR SESION";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -165,16 +177,6 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Sitka Text", 26.2499962F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(510, 58);
-            label3.Name = "label3";
-            label3.Size = new Size(248, 50);
-            label3.TabIndex = 4;
-            label3.Text = "SUPERVISOR";
-            // 
             // InterfazSupervisorMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -186,6 +188,7 @@
             Controls.Add(panel1);
             Name = "InterfazSupervisorMenu";
             Text = "InterfazSupervisorMenu";
+            Load += InterfazSupervisorMenu_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

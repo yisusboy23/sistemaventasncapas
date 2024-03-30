@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfazGerenteMenu));
             panel1 = new Panel();
+            label3 = new Label();
             pictureBox2 = new PictureBox();
             label2 = new Label();
             label1 = new Label();
@@ -52,7 +53,6 @@
             button14 = new Button();
             button15 = new Button();
             panel3 = new Panel();
-            label3 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -73,6 +73,16 @@
             panel1.Size = new Size(1068, 186);
             panel1.TabIndex = 0;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Sitka Text", 26.2499962F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(455, 35);
+            label3.Name = "label3";
+            label3.Size = new Size(194, 50);
+            label3.TabIndex = 4;
+            label3.Text = "GERENTE";
+            // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
@@ -82,6 +92,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // label2
             // 
@@ -342,24 +353,15 @@
             button15.TabIndex = 14;
             button15.Text = "CERRAR SESION";
             button15.UseVisualStyleBackColor = true;
+            button15.Click += button15_Click;
             // 
             // panel3
             // 
-            panel3.BackColor = Color.Gainsboro;
+            panel3.BackColor = Color.LightBlue;
             panel3.Location = new Point(307, 187);
             panel3.Name = "panel3";
             panel3.Size = new Size(759, 519);
             panel3.TabIndex = 2;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Sitka Text", 26.2499962F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(455, 35);
-            label3.Name = "label3";
-            label3.Size = new Size(194, 50);
-            label3.TabIndex = 4;
-            label3.Text = "GERENTE";
             // 
             // InterfazGerenteMenu
             // 
@@ -372,6 +374,7 @@
             Controls.Add(panel1);
             Name = "InterfazGerenteMenu";
             Text = "InterfazGerenteMenu";
+            Load += InterfazGerenteMenu_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

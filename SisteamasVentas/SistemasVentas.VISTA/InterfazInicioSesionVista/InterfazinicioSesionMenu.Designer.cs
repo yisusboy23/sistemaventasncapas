@@ -34,11 +34,11 @@
             label1 = new Label();
             label2 = new Label();
             panel1 = new Panel();
+            label4 = new Label();
+            label3 = new Label();
             button1 = new Button();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
-            label3 = new Label();
-            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -97,9 +97,30 @@
             panel1.Size = new Size(423, 337);
             panel1.TabIndex = 7;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(25, 109);
+            label4.Name = "label4";
+            label4.Size = new Size(121, 23);
+            label4.TabIndex = 13;
+            label4.Text = "CONTRASEÑA";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(25, 30);
+            label3.Name = "label3";
+            label3.Size = new Size(85, 23);
+            label3.TabIndex = 8;
+            label3.Text = "USUARIO";
+            // 
             // button1
             // 
             button1.BackColor = Color.Azure;
+            button1.DialogResult = DialogResult.OK;
             button1.Font = new Font("Sitka Text", 11.249999F, FontStyle.Bold, GraphicsUnit.Point);
             button1.Location = new Point(82, 231);
             button1.Name = "button1";
@@ -124,26 +145,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(351, 23);
             textBox1.TabIndex = 9;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(25, 30);
-            label3.Name = "label3";
-            label3.Size = new Size(85, 23);
-            label3.TabIndex = 8;
-            label3.Text = "USUARIO";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(25, 109);
-            label4.Name = "label4";
-            label4.Size = new Size(121, 23);
-            label4.TabIndex = 13;
-            label4.Text = "CONTRASEÑA";
             // 
             // InterfazinicioSesionMenu
             // 

@@ -1,4 +1,6 @@
 ﻿using SistemasVentas.VISTA.DetalleVentaVistas;
+using SistemasVentas.VISTA.InterfazGerenteVista;
+using SistemasVentas.VISTA.InterfazInicioSesionVista;
 using SistemasVentas.VISTA.VentaVistas;
 using System;
 using System.Collections.Generic;
@@ -38,6 +40,27 @@ namespace SistemasVentas.VISTA.InterfazVendedorVista
         private void button2_Click(object sender, EventArgs e)
         {
             AbrirFormHija(new DetalleVentaInterfaz());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Esta seguro que desea cerrar la sesion?", "CERRAR SESION", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                InterfazinicioSesionMenu abrir = new InterfazinicioSesionMenu();
+                abrir.Show();
+                this.Hide();
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new MenuGerente());
+        }
+
+        private void InterfazVendedorMenu_Load(object sender, EventArgs e)
+        {
+            pictureBox2_Click(null, e);
         }
     }
 }

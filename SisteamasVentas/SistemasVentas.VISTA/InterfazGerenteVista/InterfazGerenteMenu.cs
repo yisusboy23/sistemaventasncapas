@@ -2,6 +2,8 @@
 using SistemasVentas.VISTA.DetalleingVistas;
 using SistemasVentas.VISTA.DetalleVentaVistas;
 using SistemasVentas.VISTA.IngresoVistas;
+using SistemasVentas.VISTA.InterfazInicioSesionVista;
+using SistemasVentas.VISTA.InterfazVendedorVista;
 using SistemasVentas.VISTA.MarcaVistas;
 using SistemasVentas.VISTA.PersonaVistas;
 using SistemasVentas.VISTA.ProductoVistas;
@@ -116,6 +118,27 @@ namespace SistemasVentas.VISTA.InterfazGerenteVista
         private void button14_Click(object sender, EventArgs e)
         {
             AbrirFormHija(new DetalleingInterfaz());
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Esta seguro que desea cerrar la sesion?", "CERRAR SESION", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                InterfazinicioSesionMenu abrir = new InterfazinicioSesionMenu();
+                abrir.Show();
+                this.Hide();
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new MenuGerente());
+        }
+
+        private void InterfazGerenteMenu_Load(object sender, EventArgs e)
+        {
+            pictureBox2_Click(null, e);
         }
     }
 }
