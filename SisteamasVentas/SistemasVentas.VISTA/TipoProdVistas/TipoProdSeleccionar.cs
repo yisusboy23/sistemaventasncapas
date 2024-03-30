@@ -27,6 +27,7 @@ namespace SistemasVentas.VISTA.TipoProdVistas
         private void button1_Click(object sender, EventArgs e)
         {
             ProductoInterfaz.IdTipoProdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ProductoInterfazSupervisor.IdTipoProdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
 
         private void button2_Click(object sender, EventArgs e)

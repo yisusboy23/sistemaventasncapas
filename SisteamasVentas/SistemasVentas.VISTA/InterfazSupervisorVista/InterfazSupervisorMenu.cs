@@ -35,12 +35,12 @@ namespace SistemasVentas.VISTA.InterfazSupervisorVista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new ProductoInterfaz());
+            AbrirFormHija(new ProductoInterfazSupervisor());
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new ProveedorInterfaz());
+            AbrirFormHija(new ProveedorInterfazSupervisor());
         }
 
         private void button3_Click(object sender, EventArgs e)

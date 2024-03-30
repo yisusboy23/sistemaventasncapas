@@ -34,12 +34,12 @@ namespace SistemasVentas.VISTA.InterfazVendedorVista
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new VentaInterfaz());
+            AbrirFormHija(new VentaInterfazVendedor());
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new DetalleVentaInterfaz());
+            AbrirFormHija(new DetalleVentaInterfazVendedor());
         }
 
         private void button3_Click(object sender, EventArgs e)

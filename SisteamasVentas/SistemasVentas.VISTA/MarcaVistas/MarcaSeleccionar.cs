@@ -27,6 +27,7 @@ namespace SistemasVentas.VISTA.MarcaVistas
         private void button1_Click(object sender, EventArgs e)
         {
             ProductoInterfaz.IdMarcalSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ProductoInterfazSupervisor.IdMarcalSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
 
         private void button2_Click(object sender, EventArgs e)

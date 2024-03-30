@@ -29,6 +29,7 @@ namespace SistemasVentas.VISTA.UsuarioVistas
         {
             UsuarioRolInterfaz.IdUsuarioSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             VentaInterfaz.IdUsuarioSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            VentaInterfazVendedor.IdUsuarioSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
 
         private void button2_Click(object sender, EventArgs e)

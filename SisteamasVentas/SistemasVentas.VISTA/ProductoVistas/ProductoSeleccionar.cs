@@ -31,7 +31,7 @@ namespace SistemasVentas.VISTA.ProductoVistas
             ProveeInterfaz.IdProductoSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             DetalleVentaInterfaz.IdProductoSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             DetalleingInterfaz.IdProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-
+            DetalleVentaInterfazVendedor.IdProductoSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -27,6 +27,7 @@ namespace SistemasVentas.VISTA.ClienteVistas
         private void button1_Click(object sender, EventArgs e)
         {
             VentaInterfaz.IdClienteSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            VentaInterfazVendedor.IdClienteSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
 
         private void button2_Click(object sender, EventArgs e)
