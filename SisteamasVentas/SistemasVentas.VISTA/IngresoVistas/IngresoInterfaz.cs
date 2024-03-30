@@ -36,14 +36,21 @@ namespace SistemasVentas.VISTA.IngresoVistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Ingreso u = new Ingreso();
-            u.IdProveedor = IdProveedorSeleccionada;
-            u.Total = Convert.ToDecimal(textBox2.Text);
-            u.FechaIngreso = dateTimePicker1.Value;
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                Ingreso u = new Ingreso();
+                u.IdProveedor = IdProveedorSeleccionada;
+                u.Total = Convert.ToDecimal(textBox2.Text);
+                u.FechaIngreso = dateTimePicker1.Value;
 
-            bss.InsertarIngresoBss(u);
-            MessageBox.Show("Se guardo correctamente ");
-            dataGridView1.DataSource = bss.ListarIngresoBss();
+                bss.InsertarIngresoBss(u);
+                MessageBox.Show("Se guardo correctamente ");
+                dataGridView1.DataSource = bss.ListarIngresoBss();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -64,16 +71,23 @@ namespace SistemasVentas.VISTA.IngresoVistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int IdIngresoSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            Ingreso editarIngreso = bss.ObtenerIngresoIdBss(IdIngresoSeleccionada);
-            editarIngreso.IdProveedor = IdProveedorSeleccionada;
-            editarIngreso.Total = Convert.ToDecimal(textBox2.Text);
-            editarIngreso.FechaIngreso = dateTimePicker1.Value;
-            bss.EditarIngresoBss(editarIngreso);
-            MessageBox.Show("Datos Actualizados");
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                int IdIngresoSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                Ingreso editarIngreso = bss.ObtenerIngresoIdBss(IdIngresoSeleccionada);
+                editarIngreso.IdProveedor = IdProveedorSeleccionada;
+                editarIngreso.Total = Convert.ToDecimal(textBox2.Text);
+                editarIngreso.FechaIngreso = dateTimePicker1.Value;
+                bss.EditarIngresoBss(editarIngreso);
+                MessageBox.Show("Datos Actualizados");
 
 
-            dataGridView1.DataSource = bss.ListarIngresoBss();
+                dataGridView1.DataSource = bss.ListarIngresoBss();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

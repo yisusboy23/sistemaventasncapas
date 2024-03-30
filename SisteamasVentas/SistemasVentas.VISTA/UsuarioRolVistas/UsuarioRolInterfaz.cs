@@ -61,14 +61,21 @@ namespace SistemasVentas.VISTA.UsuarioRolVistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            UsuarioRol u = new UsuarioRol();
-            u.IdUsuario = IdUsuarioSeleccionada;
-            u.IdRol = IdRolSeleccionada;
-            u.FechaAsigna = dateTimePicker1.Value;
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                UsuarioRol u = new UsuarioRol();
+                u.IdUsuario = IdUsuarioSeleccionada;
+                u.IdRol = IdRolSeleccionada;
+                u.FechaAsigna = dateTimePicker1.Value;
 
-            bss.InsertarUsuarioRolBss(u);
-            MessageBox.Show("Se guardo correctamente ");
-            dataGridView1.DataSource = bss.ListarUsuarioRolBss();
+                bss.InsertarUsuarioRolBss(u);
+                MessageBox.Show("Se guardo correctamente ");
+                dataGridView1.DataSource = bss.ListarUsuarioRolBss();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -79,16 +86,23 @@ namespace SistemasVentas.VISTA.UsuarioRolVistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int IdUsuarioRolSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            UsuarioRol editarUsuarioRol = bss.ObtenerUsuarioRolIdBss(IdUsuarioRolSeleccionada);
-            editarUsuarioRol.IdUsuario = IdUsuarioSeleccionada;
-            editarUsuarioRol.IdRol = IdRolSeleccionada;
-            editarUsuarioRol.FechaAsigna = dateTimePicker1.Value;
-            bss.EditarUsuarioRolBss(editarUsuarioRol);
-            MessageBox.Show("Datos Actualizados");
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                int IdUsuarioRolSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                UsuarioRol editarUsuarioRol = bss.ObtenerUsuarioRolIdBss(IdUsuarioRolSeleccionada);
+                editarUsuarioRol.IdUsuario = IdUsuarioSeleccionada;
+                editarUsuarioRol.IdRol = IdRolSeleccionada;
+                editarUsuarioRol.FechaAsigna = dateTimePicker1.Value;
+                bss.EditarUsuarioRolBss(editarUsuarioRol);
+                MessageBox.Show("Datos Actualizados");
 
 
-            dataGridView1.DataSource = bss.ListarUsuarioRolBss();
+                dataGridView1.DataSource = bss.ListarUsuarioRolBss();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

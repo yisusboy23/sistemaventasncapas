@@ -31,12 +31,19 @@ namespace SistemasVentas.VISTA.TipoProdVistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            TipoProd m = new TipoProd();
-            m.Nombre = textBox1.Text;
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("El campo Nombre está vacío.");
+            }
+            else
+            {
+                TipoProd m = new TipoProd();
+                m.Nombre = textBox1.Text;
 
-            bss.InsertarTipoProdBss(m);
-            MessageBox.Show("Se guardo correctamente la marca");
-            dataGridView1.DataSource = bss.ListarTipoProdBss();
+                bss.InsertarTipoProdBss(m);
+                MessageBox.Show("Se guardó correctamente");
+                dataGridView1.DataSource = bss.ListarTipoProdBss();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -46,15 +53,20 @@ namespace SistemasVentas.VISTA.TipoProdVistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int IdTipoProdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            TipoProd editarTipoProd = bss.ObtenerTipoProdIdBss(IdTipoProdSeleccionada);
-            editarTipoProd.Nombre = textBox1.Text;
-            bss.EditarTipoProdBss(editarTipoProd);
-            MessageBox.Show("Datos Actualizados");
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("El campo Nombre está vacío.");
+            }
+            else
+            {
+                int IdTipoProdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                TipoProd editarTipoProd = bss.ObtenerTipoProdIdBss(IdTipoProdSeleccionada);
+                editarTipoProd.Nombre = textBox1.Text;
+                bss.EditarTipoProdBss(editarTipoProd);
+                MessageBox.Show("Datos Actualizados");
 
-
-            dataGridView1.DataSource = bss.ListarTipoProdBss();
-
+                dataGridView1.DataSource = bss.ListarTipoProdBss();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

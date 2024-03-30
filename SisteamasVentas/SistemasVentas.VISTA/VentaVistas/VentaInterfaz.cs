@@ -59,15 +59,22 @@ namespace SistemasVentas.VISTA.VentaVistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Venta u = new Venta();
-            u.IdCliente = IdClienteSeleccionada;
-            u.IdVendedor = IdUsuarioSeleccionada;
-            u.Total = Convert.ToDecimal(textBox3.Text);
-            u.Fecha = dateTimePicker1.Value;
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                Venta u = new Venta();
+                u.IdCliente = IdClienteSeleccionada;
+                u.IdVendedor = IdUsuarioSeleccionada;
+                u.Total = Convert.ToDecimal(textBox3.Text);
+                u.Fecha = dateTimePicker1.Value;
 
-            bss.InsertarVentaBss(u);
-            MessageBox.Show("Se guardo correctamente ");
-            dataGridView1.DataSource = bss.ListarVentaBss();
+                bss.InsertarVentaBss(u);
+                MessageBox.Show("Se guardo correctamente ");
+                dataGridView1.DataSource = bss.ListarVentaBss();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -79,17 +86,23 @@ namespace SistemasVentas.VISTA.VentaVistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int IdVentaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            Venta editarVenta = bss.ObtenerVentaIdBss(IdVentaSeleccionada);
-            editarVenta.IdVendedor = IdUsuarioSeleccionada;
-            editarVenta.IdCliente = IdClienteSeleccionada;
-            editarVenta.Total = Convert.ToDecimal(textBox3.Text);
-            editarVenta.Fecha = dateTimePicker1.Value;
-            bss.EditarVentaBss(editarVenta);
-            MessageBox.Show("Datos Actualizados");
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                int IdVentaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                Venta editarVenta = bss.ObtenerVentaIdBss(IdVentaSeleccionada);
+                editarVenta.IdVendedor = IdUsuarioSeleccionada;
+                editarVenta.IdCliente = IdClienteSeleccionada;
+                editarVenta.Total = Convert.ToDecimal(textBox3.Text);
+                editarVenta.Fecha = dateTimePicker1.Value;
+                bss.EditarVentaBss(editarVenta);
+                MessageBox.Show("Datos Actualizados");
 
-
-            dataGridView1.DataSource = bss.ListarVentaBss();
+                dataGridView1.DataSource = bss.ListarVentaBss();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

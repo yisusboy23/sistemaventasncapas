@@ -59,15 +59,22 @@ namespace SistemasVentas.VISTA.VentaVistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Venta u = new Venta();
-            u.IdCliente = IdClienteSeleccionada;
-            u.IdVendedor = IdUsuarioSeleccionada;
-            u.Total = Convert.ToDecimal(textBox3.Text);
-            u.Fecha = dateTimePicker1.Value;
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                Venta u = new Venta();
+                u.IdCliente = IdClienteSeleccionada;
+                u.IdVendedor = IdUsuarioSeleccionada;
+                u.Total = Convert.ToDecimal(textBox3.Text);
+                u.Fecha = dateTimePicker1.Value;
 
-            bss.InsertarVentaBss(u);
-            MessageBox.Show("Se guardo correctamente ");
-            dataGridView1.DataSource = bss.ListarVentaBss();
+                bss.InsertarVentaBss(u);
+                MessageBox.Show("Se guardo correctamente ");
+                dataGridView1.DataSource = bss.ListarVentaBss();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

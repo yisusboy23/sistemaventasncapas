@@ -35,14 +35,21 @@ namespace SistemasVentas.VISTA.ProveedorVistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Proveedor p = new Proveedor();
-            p.Nombre = textBox1.Text;
-            p.Telefono = textBox2.Text;
-            p.Direccion = textBox3.Text;
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                Proveedor p = new Proveedor();
+                p.Nombre = textBox1.Text;
+                p.Telefono = textBox2.Text;
+                p.Direccion = textBox3.Text;
 
-            bss.InsertarProveedorBss(p);
-            MessageBox.Show("Se guardo correctamente");
-            dataGridView1.DataSource = bss.ListarProveedorBss();
+                bss.InsertarProveedorBss(p);
+                MessageBox.Show("Se guardo correctamente");
+                dataGridView1.DataSource = bss.ListarProveedorBss();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -54,16 +61,22 @@ namespace SistemasVentas.VISTA.ProveedorVistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int IdProveedorSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            Proveedor editarProveedor = bss.ObtenerProveedorIdBss(IdProveedorSeleccionada);
-            editarProveedor.Nombre = textBox1.Text;
-            editarProveedor.Telefono = textBox2.Text;
-            editarProveedor.Direccion = textBox3.Text;
-            bss.EditarProveedorBss(editarProveedor);
-            MessageBox.Show("Datos Actualizados");
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                int IdProveedorSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                Proveedor editarProveedor = bss.ObtenerProveedorIdBss(IdProveedorSeleccionada);
+                editarProveedor.Nombre = textBox1.Text;
+                editarProveedor.Telefono = textBox2.Text;
+                editarProveedor.Direccion = textBox3.Text;
+                bss.EditarProveedorBss(editarProveedor);
+                MessageBox.Show("Datos Actualizados");
 
-
-            dataGridView1.DataSource = bss.ListarProveedorBss();
+                dataGridView1.DataSource = bss.ListarProveedorBss();
+            }
         }
     }
 }

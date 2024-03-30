@@ -63,15 +63,22 @@ namespace SistemasVentas.VISTA.DetalleVentaVistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DetalleVenta d = new DetalleVenta();
-            d.IdVenta = IdVentaSeleccionada;
-            d.IdProducto = IdProductoSeleccionada;
-            d.Cantidad = Convert.ToInt32(textBox3.Text);
-            d.PrecioVenta = Convert.ToDecimal(textBox4.Text);
-            d.SubTotal = Convert.ToDecimal(textBox5.Text);
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(textBox5.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                DetalleVenta d = new DetalleVenta();
+                d.IdVenta = IdVentaSeleccionada;
+                d.IdProducto = IdProductoSeleccionada;
+                d.Cantidad = Convert.ToInt32(textBox3.Text);
+                d.PrecioVenta = Convert.ToDecimal(textBox4.Text);
+                d.SubTotal = Convert.ToDecimal(textBox5.Text);
 
-            bss.InsertarDetalleVentaBss(d);
-            MessageBox.Show("Se guardo correctamente El detalle de la venta");
+                bss.InsertarDetalleVentaBss(d);
+                MessageBox.Show("Se guardo correctamente El detalle de la venta");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -85,18 +92,25 @@ namespace SistemasVentas.VISTA.DetalleVentaVistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int IdDetalleVentaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            DetalleVenta editarDetalleVenta = bss.ObtenerDetalleVentaIdBss(IdDetalleVentaSeleccionada);
-            editarDetalleVenta.IdVenta = IdVentaSeleccionada;
-            editarDetalleVenta.IdProducto = IdProductoSeleccionada;
-            editarDetalleVenta.Cantidad = Convert.ToInt32(textBox3.Text);
-            editarDetalleVenta.PrecioVenta = Convert.ToDecimal(textBox4.Text);
-            editarDetalleVenta.SubTotal = Convert.ToDecimal(textBox5.Text);
-            bss.EditarDetalleVentaBss(editarDetalleVenta);
-            MessageBox.Show("Datos Actualizados");
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(textBox5.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                int IdDetalleVentaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                DetalleVenta editarDetalleVenta = bss.ObtenerDetalleVentaIdBss(IdDetalleVentaSeleccionada);
+                editarDetalleVenta.IdVenta = IdVentaSeleccionada;
+                editarDetalleVenta.IdProducto = IdProductoSeleccionada;
+                editarDetalleVenta.Cantidad = Convert.ToInt32(textBox3.Text);
+                editarDetalleVenta.PrecioVenta = Convert.ToDecimal(textBox4.Text);
+                editarDetalleVenta.SubTotal = Convert.ToDecimal(textBox5.Text);
+                bss.EditarDetalleVentaBss(editarDetalleVenta);
+                MessageBox.Show("Datos Actualizados");
 
 
-            dataGridView1.DataSource = bss.ListarDetalleVentaBss();
+                dataGridView1.DataSource = bss.ListarDetalleVentaBss();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

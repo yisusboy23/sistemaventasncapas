@@ -32,12 +32,21 @@ namespace SistemasVentas.VISTA.RolVistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Rol m = new Rol();
-            m.Nombre = textBox1.Text;
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("El campo Nombre está vacío. Por favor, ingrese un nombre para el rol.");
+            }
+            else
+            {
+                Rol m = new Rol();
+                m.Nombre = textBox1.Text;
 
-            bss.InsertarRolBss(m);
-            MessageBox.Show("Se guardo correctamente la marca");
-            dataGridView1.DataSource = bss.ListarRolBss();
+                bss.InsertarRolBss(m);
+                MessageBox.Show("Se guardó correctamente");
+
+                dataGridView1.DataSource = bss.ListarRolBss();
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -47,14 +56,20 @@ namespace SistemasVentas.VISTA.RolVistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int IdMarcaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            Rol editarMarca = bss.ObtenerRolIdBss(IdMarcaSeleccionada);
-            editarMarca.Nombre = textBox1.Text;
-            bss.EditarRolBss(editarMarca);
-            MessageBox.Show("Datos Actualizados");
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("El campo Nombre está vacío.");
+            }
+            else
+            {
+                int IdRolSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                Rol editarRol = bss.ObtenerRolIdBss(IdRolSeleccionada);
+                editarRol.Nombre = textBox1.Text;
+                bss.EditarRolBss(editarRol);
+                MessageBox.Show("Datos Actualizados");
 
-
-            dataGridView1.DataSource = bss.ListarRolBss();
+                dataGridView1.DataSource = bss.ListarRolBss();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

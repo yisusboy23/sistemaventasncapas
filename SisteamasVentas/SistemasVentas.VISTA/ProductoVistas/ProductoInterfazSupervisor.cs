@@ -62,17 +62,24 @@ namespace SistemasVentas.VISTA.ProductoVistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Producto u = new Producto();
-            u.IdTipoProd = IdTipoProdSeleccionada;
-            u.IdMarca = IdMarcalSeleccionada;
-            u.Nombre = textBox3.Text;
-            u.CodigoBarra = textBox4.Text;
-            u.Unidad = Convert.ToInt32(textBox5.Text);
-            u.Descripcion = textBox6.Text;
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                Producto u = new Producto();
+                u.IdTipoProd = IdTipoProdSeleccionada;
+                u.IdMarca = IdMarcalSeleccionada;
+                u.Nombre = textBox3.Text;
+                u.CodigoBarra = textBox4.Text;
+                u.Unidad = Convert.ToInt32(textBox5.Text);
+                u.Descripcion = textBox6.Text;
 
-            bss.InsertarProductoBss(u);
-            MessageBox.Show("Se guardo correctamente ");
-            dataGridView1.DataSource = bss.ListarProductoBss();
+                bss.InsertarProductoBss(u);
+                MessageBox.Show("Se guardo correctamente ");
+                dataGridView1.DataSource = bss.ListarProductoBss();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -87,19 +94,26 @@ namespace SistemasVentas.VISTA.ProductoVistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int IdProductoSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            Producto editarProducto = bss.ObtenerProductoIdBss(IdProductoSeleccionada);
-            editarProducto.IdTipoProd = IdTipoProdSeleccionada;
-            editarProducto.IdMarca = IdMarcalSeleccionada;
-            editarProducto.Nombre = textBox3.Text;
-            editarProducto.CodigoBarra = textBox4.Text;
-            editarProducto.Unidad = Convert.ToInt32(textBox5.Text);
-            editarProducto.Descripcion = textBox6.Text;
-            bss.EditarProductoBss(editarProducto);
-            MessageBox.Show("Datos Actualizados");
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                int IdProductoSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                Producto editarProducto = bss.ObtenerProductoIdBss(IdProductoSeleccionada);
+                editarProducto.IdTipoProd = IdTipoProdSeleccionada;
+                editarProducto.IdMarca = IdMarcalSeleccionada;
+                editarProducto.Nombre = textBox3.Text;
+                editarProducto.CodigoBarra = textBox4.Text;
+                editarProducto.Unidad = Convert.ToInt32(textBox5.Text);
+                editarProducto.Descripcion = textBox6.Text;
+                bss.EditarProductoBss(editarProducto);
+                MessageBox.Show("Datos Actualizados");
 
 
-            dataGridView1.DataSource = bss.ListarProductoBss();
+                dataGridView1.DataSource = bss.ListarProductoBss();
+            }
         }
     }
 }

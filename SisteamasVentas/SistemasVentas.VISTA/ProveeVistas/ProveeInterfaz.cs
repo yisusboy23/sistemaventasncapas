@@ -61,15 +61,22 @@ namespace SistemasVentas.VISTA.ProveeVistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Provee u = new Provee();
-            u.IdProducto = IdProductoSeleccionada;
-            u.IdProveedor = IdProveedorSeleccionada;
-            u.Fecha = dateTimePicker1.Value;
-            u.Precio = Convert.ToDecimal(textBox3.Text);
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                Provee u = new Provee();
+                u.IdProducto = IdProductoSeleccionada;
+                u.IdProveedor = IdProveedorSeleccionada;
+                u.Fecha = dateTimePicker1.Value;
+                u.Precio = Convert.ToDecimal(textBox3.Text);
 
-            bss.InsertarProveeBss(u);
-            MessageBox.Show("Se guardo correctamente");
-            dataGridView1.DataSource = bss.ListarProveeBss();
+                bss.InsertarProveeBss(u);
+                MessageBox.Show("Se guardo correctamente");
+                dataGridView1.DataSource = bss.ListarProveeBss();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -81,17 +88,24 @@ namespace SistemasVentas.VISTA.ProveeVistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int IdProveeSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            Provee editarProvee = bss.ObtenerProveeIdBss(IdProveeSeleccionada);
-            editarProvee.IdProducto = IdProductoSeleccionada;
-            editarProvee.IdProveedor = IdProveedorSeleccionada;
-            editarProvee.Fecha = dateTimePicker1.Value;
-            editarProvee.Precio = Convert.ToDecimal(textBox3.Text);
-            bss.EditarProveeBss(editarProvee);
-            MessageBox.Show("Datos Actualizados");
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                int IdProveeSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                Provee editarProvee = bss.ObtenerProveeIdBss(IdProveeSeleccionada);
+                editarProvee.IdProducto = IdProductoSeleccionada;
+                editarProvee.IdProveedor = IdProveedorSeleccionada;
+                editarProvee.Fecha = dateTimePicker1.Value;
+                editarProvee.Precio = Convert.ToDecimal(textBox3.Text);
+                bss.EditarProveeBss(editarProvee);
+                MessageBox.Show("Datos Actualizados");
 
 
-            dataGridView1.DataSource = bss.ListarProveeBss();
+                dataGridView1.DataSource = bss.ListarProveeBss();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

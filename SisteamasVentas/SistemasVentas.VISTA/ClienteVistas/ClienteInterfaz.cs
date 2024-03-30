@@ -37,14 +37,21 @@ namespace SistemasVentas.VISTA.ClienteVistas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Cliente c = new Cliente();
-            c.IdPersona = IdPersonaSeleccionada;
-            c.TipoCliente = textBox2.Text;
-            c.CodigoCliente = textBox3.Text;
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                Cliente c = new Cliente();
+                c.IdPersona = IdPersonaSeleccionada;
+                c.TipoCliente = textBox2.Text;
+                c.CodigoCliente = textBox3.Text;
 
-            bss.InsertarClienteBss(c);
-            MessageBox.Show("Se guardo correctamente ");
-            dataGridView1.DataSource = bss.ListarClienteBss();
+                bss.InsertarClienteBss(c);
+                MessageBox.Show("Se guardo correctamente ");
+                dataGridView1.DataSource = bss.ListarClienteBss();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -66,16 +73,23 @@ namespace SistemasVentas.VISTA.ClienteVistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int IdClienteSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            Cliente editarCliente = bss.ObtenerClienteIdBss(IdClienteSeleccionada);
-            editarCliente.IdPersona = IdPersonaSeleccionada;
-            editarCliente.TipoCliente = textBox2.Text;
-            editarCliente.CodigoCliente = textBox3.Text;
-            bss.EditarClienteBss(editarCliente);
-            MessageBox.Show("Datos Actualizados");
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                int IdClienteSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                Cliente editarCliente = bss.ObtenerClienteIdBss(IdClienteSeleccionada);
+                editarCliente.IdPersona = IdPersonaSeleccionada;
+                editarCliente.TipoCliente = textBox2.Text;
+                editarCliente.CodigoCliente = textBox3.Text;
+                bss.EditarClienteBss(editarCliente);
+                MessageBox.Show("Datos Actualizados");
 
 
-            dataGridView1.DataSource = bss.ListarClienteBss();
+                dataGridView1.DataSource = bss.ListarClienteBss();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

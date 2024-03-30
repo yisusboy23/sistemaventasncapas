@@ -85,10 +85,11 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.ErrorImage = null;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(14, 11);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(131, 97);
+            pictureBox2.Size = new Size(152, 109);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
@@ -98,7 +99,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Sitka Text", 26.2499962F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(159, 58);
+            label2.Location = new Point(188, 61);
             label2.Name = "label2";
             label2.Size = new Size(163, 50);
             label2.TabIndex = 2;
@@ -108,7 +109,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Sitka Text", 26.2499962F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(140, 11);
+            label1.Location = new Point(159, 11);
             label1.Name = "label1";
             label1.Size = new Size(182, 50);
             label1.TabIndex = 1;

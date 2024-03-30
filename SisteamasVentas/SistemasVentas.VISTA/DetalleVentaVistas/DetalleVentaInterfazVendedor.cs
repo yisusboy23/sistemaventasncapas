@@ -41,16 +41,22 @@ namespace SistemasVentas.VISTA.DetalleVentaVistas
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(textBox5.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                DetalleVenta d = new DetalleVenta();
+                d.IdVenta = IdVentaSeleccionada;
+                d.IdProducto = IdProductoSeleccionada;
+                d.Cantidad = Convert.ToInt32(textBox3.Text);
+                d.PrecioVenta = Convert.ToDecimal(textBox4.Text);
+                d.SubTotal = Convert.ToDecimal(textBox5.Text);
 
-            DetalleVenta d = new DetalleVenta();
-            d.IdVenta = IdVentaSeleccionada;
-            d.IdProducto = IdProductoSeleccionada;
-            d.Cantidad = Convert.ToInt32(textBox3.Text);
-            d.PrecioVenta = Convert.ToDecimal(textBox4.Text);
-            d.SubTotal = Convert.ToDecimal(textBox5.Text);
-
-            bss.InsertarDetalleVentaBss(d);
-            MessageBox.Show("Se guardo correctamente El detalle de la venta");
+                bss.InsertarDetalleVentaBss(d);
+                MessageBox.Show("Se guardo correctamente El detalle de la venta");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
