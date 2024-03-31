@@ -49,6 +49,22 @@ namespace SistemasVentas.VISTA.DetalleingVistas
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
             }
+            else if (!int.TryParse(textBox3.Text, out int cantidad))
+            {
+                MessageBox.Show("La cantidad debe ser un número entero válido.");
+            }
+            else if (!decimal.TryParse(textBox4.Text, out decimal precioCosto))
+            {
+                MessageBox.Show("El precio de costo debe ser un valor numérico válido.");
+            }
+            else if (!decimal.TryParse(textBox5.Text, out decimal precioVenta))
+            {
+                MessageBox.Show("El precio de venta debe ser un valor numérico válido.");
+            }
+            else if (!decimal.TryParse(textBox6.Text, out decimal subTotal))
+            {
+                MessageBox.Show("El subtotal debe ser un valor numérico válido.");
+            }
             else
             {
                 Detalleing d = new Detalleing();
@@ -80,6 +96,22 @@ namespace SistemasVentas.VISTA.DetalleingVistas
             if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text))
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else if (!int.TryParse(textBox3.Text, out int cantidad))
+            {
+                MessageBox.Show("La cantidad debe ser un número entero válido.");
+            }
+            else if (!decimal.TryParse(textBox4.Text, out decimal precioCosto))
+            {
+                MessageBox.Show("El precio de costo debe ser un valor numérico válido.");
+            }
+            else if (!decimal.TryParse(textBox5.Text, out decimal precioVenta))
+            {
+                MessageBox.Show("El precio de venta debe ser un valor numérico válido.");
+            }
+            else if (!decimal.TryParse(textBox6.Text, out decimal subTotal))
+            {
+                MessageBox.Show("El subtotal debe ser un valor numérico válido.");
             }
             else
             {

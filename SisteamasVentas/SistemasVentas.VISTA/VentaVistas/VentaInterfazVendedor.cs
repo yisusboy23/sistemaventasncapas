@@ -63,6 +63,10 @@ namespace SistemasVentas.VISTA.VentaVistas
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
             }
+            else if (!decimal.TryParse(textBox3.Text, out decimal totalVenta))
+            {
+                MessageBox.Show("El total de la venta solo puede contener números.");
+            }
             else
             {
                 Venta u = new Venta();

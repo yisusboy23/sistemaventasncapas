@@ -65,6 +65,10 @@ namespace SistemasVentas.VISTA.ProveeVistas
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
             }
+            else if (!decimal.TryParse(textBox3.Text, out decimal precio))
+            {
+                MessageBox.Show("El precio debe ser un valor numérico válido.");
+            }
             else
             {
                 Provee u = new Provee();
@@ -91,6 +95,10 @@ namespace SistemasVentas.VISTA.ProveeVistas
             if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else if (!decimal.TryParse(textBox3.Text, out decimal precio))
+            {
+                MessageBox.Show("El precio debe ser un valor numérico válido.");
             }
             else
             {

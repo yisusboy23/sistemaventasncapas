@@ -67,6 +67,10 @@ namespace SistemasVentas.VISTA.ProductoVistas
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
             }
+            else if (!int.TryParse(textBox5.Text, out int unidades))
+            {
+                MessageBox.Show("El campo 'Unidades' debe ser numérico.");
+            }
             else
             {
                 Producto u = new Producto();
@@ -98,6 +102,10 @@ namespace SistemasVentas.VISTA.ProductoVistas
             if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text))
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else if (!int.TryParse(textBox5.Text, out int unidades))
+            {
+                MessageBox.Show("El campo 'Unidades' debe ser numérico.");
             }
             else
             {

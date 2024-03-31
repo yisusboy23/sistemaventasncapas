@@ -45,6 +45,18 @@ namespace SistemasVentas.VISTA.DetalleVentaVistas
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
             }
+            else if (!int.TryParse(textBox3.Text, out int cantidad))
+            {
+                MessageBox.Show("La cantidad debe ser un número entero válido.");
+            }
+            else if (!decimal.TryParse(textBox4.Text, out decimal precioVenta))
+            {
+                MessageBox.Show("El precio de venta debe ser un valor numérico válido.");
+            }
+            else if (!decimal.TryParse(textBox5.Text, out decimal subTotal))
+            {
+                MessageBox.Show("El subtotal debe ser un valor numérico válido.");
+            }
             else
             {
                 DetalleVenta d = new DetalleVenta();

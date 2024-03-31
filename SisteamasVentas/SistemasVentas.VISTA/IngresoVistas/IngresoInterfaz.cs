@@ -40,6 +40,10 @@ namespace SistemasVentas.VISTA.IngresoVistas
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
             }
+            else if (!decimal.TryParse(textBox2.Text, out decimal total))
+            {
+                MessageBox.Show("El campo Total solo puede contener números.");
+            }
             else
             {
                 Ingreso u = new Ingreso();
@@ -74,6 +78,10 @@ namespace SistemasVentas.VISTA.IngresoVistas
             if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else if (!decimal.TryParse(textBox2.Text, out decimal total))
+            {
+                MessageBox.Show("El campo Total solo puede contener números.");
             }
             else
             {
