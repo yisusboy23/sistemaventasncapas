@@ -43,8 +43,6 @@ namespace SistemasVentas.VISTA.InterfazInicioSesionVista
                 abrir.Show();
                 this.Hide();
             }
-            // Agregar más bloques if según sea necesario para otros roles
-            // ...
             else if (conexion.VerificarCredenciales3(nombreuser, contraseña))
             {
                 InterfazVendedorMenu abrir = new InterfazVendedorMenu();
